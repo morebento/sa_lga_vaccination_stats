@@ -43,3 +43,7 @@ rsconnect/
 
 # readme files
 README.html
+
+# all html files
+*.html
+*.htm
