@@ -1,0 +1,652 @@
+---
+title: "SA LGA vax stats exploration"
+author: "Ben Moretti"
+date: "30 October 2021"
+output: 
+    html_document:
+        toc: true
+        toc_float: true
+        number_sections: true
+        theme: spacelab
+       
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction 
+
+The South Australian Government has announced lifting of various COVID restrictions when the State reaches a vaccination rate of 80% overall, and then further restriction lifting at 90%. These figures made me wonder how much variation there is between the whole of state vaccination rate and those for Local Government Areas (Councils), and what sort of variation there is between LGAs. So the purpose of this is to look at some exploratory charts and statistics. 
+
+
+# Data Gathering
+
+For this exercise the data from the <https://covid19nearme.com.au/vaccination-stats> will be used. These excellent people have written scraper, parser and data visualisation code for all of the Australian governments' COVID data. All of their code is published here <https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf> and the collated vaccination data is published here <https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv> in CSV format, and this is the source for this exercise. 
+
+First, the data will be read from the CSV file. 
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+# first some libraries
+library(tidyverse)
+library(janitor)
+library(ggthemes)
+library(ggrepel)
+library(broom)
+library(scales)
+library(lubridate)
+
+# read the data from csv and clean the names
+air_tbl <- read_csv("https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv") %>% 
+    clean_names()
+
+```
+
+
+Have a quick explore of the data
+
+```{r}
+
+air_tbl %>% glimpse()
+
+```
+
+The columns of interest are 
+
+* `date_as_at`
+* `state`
+* `abs_name`
+* `air_first_dose_pct`
+* `air_second_dose_pct`
+* `air_first_dose_approx_count`
+* `air_second_dose_approx_count`
+* `abs_erp_2019_population`
+
+Select these into a data frame, filtering for only *SA* records.
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+air_tidy_tbl <- air_tbl %>%
+    filter(state == "SA") %>%
+    select(date_as_at, state, abs_name, air_first_dose_pct:abs_erp_2019_population) %>%
+    drop_na(air_second_dose_pct)
+
+head(air_tidy_tbl)
+
+```
+
+Ok so the data is now good to move onto the next step
+
+# Exploration
+
+As the data has a date column for the vaccination rate, this can be used to examine the change in rate over time. In the example below, the LGAs for Adelaide, Mt Gambier and Playford are selected and then their data plotted against date.
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+air_tidy_tbl %>%
+    filter(abs_name %in% c("Adelaide (C)", "Playford (C)", "Mount Gambier (C)")) %>%
+    ggplot(aes(x=date_as_at)) +
+    geom_line(aes(y=air_first_dose_pct, colour="First")) +
+    geom_line(aes(y=air_second_dose_pct, colour="Second")) +
+    geom_point(aes(y=air_first_dose_pct, colour="First")) +
+    geom_point(aes(y=air_second_dose_pct, colour="Second")) +
+    facet_wrap(vars(abs_name)) +
+    theme_clean() + scale_colour_tableau() + # from ggthemes
+    labs(
+        title = "Vaccination Rates for Adelaide, Playford and Mt Gambier",
+        x = "Date",
+        y = "%",
+        colour = "Dose",
+        caption = "Data from https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv by @morebento"
+    )
+    
+
+```
+
+It can be seen that there is some variability in the vaccination rates at each date. This can be examined further by the use of a histogram to display the spread of LGAs by vaccination rate, and this is shown in the chart below.
+
+The data has a time series, so the most recent values will need to be selected using the `slice_max` function from `dplyr`
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+air_tidy_tbl %>%
+    slice_max(date_as_at) %>%  
+    select(abs_name, air_second_dose_pct, air_first_dose_pct) %>% 
+    pivot_longer(!abs_name, names_to = "metric", values_to = "value") %>%
+    mutate(
+        metric = case_when(
+            metric == "air_first_dose_pct" ~ "First",
+            metric == "air_second_dose_pct" ~ "Second"
+        )
+    ) %>%
+    ggplot(aes(value)) +
+    geom_histogram(aes(fill=metric), alpha=0.8, position="identity", bins = 10) +
+    geom_vline(xintercept=50, linetype="dashed", aes(colour="lightgray")) +
+    geom_vline(xintercept=70, linetype="dashed", aes(colour="lightgray")) +
+    geom_vline(xintercept=80, linetype="dashed", aes(colour="lightgray")) +
+    theme_clean() + 
+    scale_fill_tableau() + # from ggthemes
+    labs(
+        title = "Histogram of SA LGAs by percentage of population vaccinated by dose count",
+        subtitle = "Data binned into deciles",
+        caption = "Data from https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv by @morebento",
+        fill = "Dose",
+        x = "%",
+        y = "Count of LGAs"
+    )
+
+```
+
+The histogram chart above displays vertical dashed lines for 50%, 70% and 80% vaccination rates. The data have been binned into deciles. The y-axis displays the count of LGAS within a particular bin. 
+
+As can be seen, there is quite a spread of values, with many LGAs below the 80% and indeed 70% vaccination rate for the second dose. 
+
+# Hypothesis Formulation
+
+
+
+# Modelling
+
+Because the data have a time series, this can be used to forecast or predict future values, but because of the low number of records here more sophisticated models are not suitable, and thus the venerable *linear regression* will be used. 
+
+## Predicting dates for certain vaccination levels
+
+The first scenario which will be examined is the expected date at which certin vaccination levels will be reached, for example the date at which 80% will be vaccinated
+
+### Predicting dates for one LGA
+
+Initially a model will be developed for a single LGA _Mount Gambier (C)_. 
+
+First the data needs to be selected and the dates converted to _epoch_ format
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+mt_gambier_tbl <- air_tidy_tbl %>%
+    filter(abs_name == "Mount Gambier (C)") %>%
+    
+    # because of the quirks of dates we will be using epoch so the date needs to be 
+    # converted to the number of seconds since 1 January 1970
+    mutate(
+        date_as_at_epoch = as.integer(as.POSIXct(date_as_at))
+    ) %>%
+    select(air_second_dose_pct, date_as_at_epoch)
+
+
+mt_gambier_tbl
+```
+
+Next, the data can be modelled using linear regression and the model examined
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+lm_fit <- lm(date_as_at_epoch ~ air_second_dose_pct, data = mt_gambier_tbl)
+
+summary(lm_fit)
+```
+
+The fitted and actual values can be plotted using the `augment` function from the `broom` package.
+
+```{r}
+augment(lm_fit) %>%
+    rename(
+        actual = date_as_at_epoch,
+        predicted = `.fitted`
+    ) %>%
+    select(actual, predicted, air_second_dose_pct) %>%
+    pivot_longer(!air_second_dose_pct, names_to ="metric", values_to = "datetime_epoch") %>%
+    mutate(
+        datetime = as_datetime(datetime_epoch)
+    ) %>%
+    ggplot() +
+    geom_point(aes(x = datetime, y = air_second_dose_pct, colour= metric)) +
+    scale_colour_tableau() +
+    theme_clean() +
+    labs(
+        title = "Predicted vs Actuals for Mt Gambier model",
+        caption = "Data from https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv by @morebento",
+        fill = "Dose",
+        x = "Date",
+        y = "Second Dose %"
+    )
+    
+    
+
+```
+
+
+The model above is using the percentage of second dose vaccination to predict the date at which that might occur, using epoch.
+
+The summary shows the regression residuals, which are fairly good. There is an adjusted R squared value of 99.33% which is an excellent regression, however it should be noted that there are not many values used. Further examination of the regression can be performed through the following plot
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+plot(lm_fit)
+```
+
+
+The model can now be used to predict dates at which certain second dose % would be expected, as is shown in the below code. 
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+# date and time library
+library(lubridate) 
+ 
+# define a data table of vaccination rates from 50% to 90%
+p <- tribble(
+    ~air_second_dose_pct,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90
+)
+
+# predict against these values using the model converting to date time, cast to a data frame, 
+# add in the columns for the predictors and add a type column
+predicted_tbl <- predict(lm_fit, newdata = p) %>% 
+    as_datetime() %>% 
+    as_tibble() %>% 
+    bind_cols(p) %>% 
+    mutate(
+        type = "Predicted",
+        date_as_at = value
+    ) 
+
+# for good measure also predict against the training set
+predicted_actuals_tbl <- predict(lm_fit, newdata = mt_gambier_tbl)  %>%
+    as_datetime() %>%
+    as_tibble() %>%
+    bind_cols(mt_gambier_tbl) %>%
+    mutate(
+        type = "Predicted Actual",
+        date_as_at = value
+    )
+
+
+# add in the actual values for mt gambier
+actuals_tbl <- mt_gambier_tbl %>%
+    mutate(
+        date_as_at = as_datetime(date_as_at_epoch),
+        type = "Actual"
+    ) 
+
+# bind them together
+combined_tbl <- bind_rows(predicted_tbl, actuals_tbl, predicted_actuals_tbl) %>%
+    select(date_as_at, air_second_dose_pct, type)
+```
+
+The resulting data frame can now be plotted
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+combined_tbl %>%
+    ggplot(aes(date_as_at, air_second_dose_pct)) +
+    geom_line(aes(colour=type)) +
+    geom_point(aes(colour=type)) +
+    geom_hline(yintercept=50, linetype="dashed", aes(colour="lightgray")) +
+    geom_hline(yintercept=70, linetype="dashed", aes(colour="lightgray")) +
+    geom_hline(yintercept=80, linetype="dashed", aes(colour="lightgray")) +
+    scale_colour_tableau() +
+    theme_clean() +
+    labs(
+        title = "Plot of predicted and actual vaccination rates for Mt Gambier (C)",
+        subtitle = "Dashed horizontal lines at 50%, 70% and 80%",
+        caption =  "Data sourced from https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf by @morebento ",
+        colour = "Type",
+        x = "Date",
+        y = "% Vaccinated"
+    )
+
+```
+
+
+### Predicting dates for many LGAs
+
+It can be seen that the modelling approach here is reasonably accurate, so it can be used to predict the dates at which certain vaccination rates for all of the LGAs in SA will be reached
+
+First, the epoch column should be added to the entire data set and then it is nested
+
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+air_nested_tbl <- air_tidy_tbl %>%
+    mutate(
+        date_as_at_epoch = as.integer(as.POSIXct(date_as_at))
+    ) %>%
+    select(abs_name, date_as_at_epoch, air_second_dose_pct) %>%
+    group_by(abs_name) %>%
+    nest()
+
+```
+
+Next, an anonymous function is used with `map` to take the nested data and perform the modelling run above
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+air_nested_model_tbl <- air_nested_tbl %>%
+    mutate(
+        model = map(data, function(df) lm(date_as_at_epoch ~ air_second_dose_pct, data = df))
+    ) 
+
+
+```
+
+The vaccination values to forecast to are defined above in the variable `p`
+
+```{r}
+p
+
+```
+
+These values can now be used to predict the dates at which the vaccination rates will be reached 
+
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+# here map is used to predict using the lga specific model against the predictors
+# the predicted values are then joined back to the data frame
+# finally the regression metrics are calculated via the glance function from the broom package
+
+predicted_dates_tbl <- air_nested_model_tbl %>%
+    mutate(
+        prediction = map(.x = model, ~ predict(., p)), 
+        predictors = map(abs_name,  ~ bind_cols(p)),
+        regression_metrics = map(.x = model, ~glance(.))
+    ) 
+
+predicted_dates_tbl
+```
+
+The regression metrics can how be unpacked from the data frame and used to plot a histogram, which shows the spread of Adjusted R Squared values. 
+
+```{r}
+
+predicted_dates_tbl %>%
+    select(abs_name, regression_metrics) %>%
+    unnest(regression_metrics) %>%
+    ggplot(aes(adj.r.squared)) +
+    geom_histogram(bins = 10) +
+    theme_clean() + 
+    scale_fill_tableau() + # from ggthemes
+    labs(
+        title = "Histogram of SA LGAs regression Adjusted R Squared",
+        subtitle = "Data binned into deciles",
+        caption = "Data from https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv by @morebento",
+        x = "Adjusted R Squared",
+        y = "Count"
+    )
+    
+```
+
+This histogram shows that the regression model used is very accurate, with an Adjusted R Squared value of 0.96 as a minimum and close to 0.99 as the maximum.
+
+The data can now be tidied into a format which can be reused. 
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+predicted_dates_tidy_tbl <- predicted_dates_tbl %>%
+    select(abs_name, prediction, predictors) %>%
+    unnest() %>%
+    mutate(
+        date_as_at = round_date(as_datetime(prediction), "day")
+    ) %>%
+    select(-prediction) %>%
+    mutate(
+        type = "Predicted"
+    )
+
+# preview
+predicted_dates_tidy_tbl
+```
+The predicted values can now be joined back to the actual data 
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+combined_tbl <- air_tidy_tbl %>%
+    select(date_as_at, abs_name, air_second_dose_pct) %>%
+    mutate(
+        type = "Actual"
+    ) %>%
+    bind_rows(
+        predicted_dates_tidy_tbl
+    ) %>%
+    arrange(
+        abs_name, date_as_at
+    )
+ 
+combined_tbl
+```
+The actual and predicted data are now combined into a single data frame. This will be saved as `rds` data file in the `data` directory
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+combined_tbl %>% write_rds("data/combined_date_forecast.rds")
+
+```
+
+
+## Predicting vaccination rates 
+
+The above method uses regression to predict the dates at which certain vaccination rates will be reached. It is also necessary to predict the expected vaccination rates for LGAs at the expected opening day of *23 November 2021*. In this scenario, the same sequence of operations and indeed data will be used, however the regression formula will in effect be reversed
+
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+# the same data will be used but the formula reversed, allowing the vax rate to be predicted at a given date
+air_nested_reversed_model_tbl <- air_nested_tbl %>%
+    mutate(
+        model = map(data, function(df) lm(air_second_dose_pct ~ date_as_at_epoch, data = df))
+    ) 
+
+# this gives a column of lm models
+air_nested_reversed_model_tbl
+
+```
+The epoch value for the 23rd of November 2021 is calculated -- this will be the predictor
+
+```{r}
+# convert the opening day date into epoch then cast to a dataframe with the expected column names
+opening_day_tbl <- as.integer(as.POSIXct("2021-11-23")) %>%
+    as_tibble() %>%
+    rename(date_as_at_epoch = value)
+
+```
+
+This predictor data frame can now be used to predict, bind the predicted columns back to the predictors, and calculate the regression metrics
+
+```{r  message=FALSE, warning=FALSE, paged.print=TRUE}
+predicted_vax_rates_tbl <- air_nested_reversed_model_tbl %>%
+    mutate(
+        prediction = map(.x = model, ~ predict(., opening_day_tbl)), 
+        predictors = map(abs_name,  ~ bind_cols(opening_day_tbl)),
+        regression_metrics = map(.x = model, ~glance(.))
+    ) 
+
+# this returns a dataframe with the regression metrics, predictions and predictors
+predicted_vax_rates_tbl
+
+```
+
+As previously the predictors and prediction can be retrieved and tidied into a usable format
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+predicted_vax_rates_tidy_tbl <- predicted_vax_rates_tbl %>%
+    select(abs_name, prediction, predictors) %>%
+    unnest() %>%
+    mutate(
+        date_as_at = round_date(as_datetime(date_as_at_epoch), "day")
+    ) %>%
+    select(-date_as_at_epoch) %>%
+    mutate(
+        type = "Predicted"
+    ) %>%
+    rename(
+        air_second_dose_pct = prediction
+    ) %>%
+    ungroup()
+
+# preview
+predicted_vax_rates_tidy_tbl
+```
+
+The regression metrics can also be examined as previously 
+
+
+```{r}
+
+predicted_dates_tbl %>%
+    select(abs_name, regression_metrics) %>%
+    unnest(regression_metrics)
+
+```
+
+
+
+
+# Visualisation
+
+Now that predictions have been made for the dates at which certain vaccination rates are reached, and for the vaccination rate expected on the 23rd of November 2021, then these can be visualised 
+
+## Forecast and Actual Growth Chart
+
+```{r  message=FALSE, warning=FALSE, paged.print=TRUE}
+combined_tbl %>%
+    filter(
+        abs_name %in% c("Playford (C)", "Burnside (C)", "Berri and Barmera (DC)", "Mount Gambier (C)", "Salisbury (C)", "Yorke Peninsula (DC)")
+    ) %>%
+    ggplot(aes(date_as_at, air_second_dose_pct)) +
+    geom_line(aes(colour=type)) +
+    geom_point(aes(colour=type)) +
+    geom_hline(yintercept = 50, alpha=0.8, linetype="dashed") +
+    geom_hline(yintercept = 70,alpha=0.8, linetype="dashed") +
+    geom_hline(yintercept = 80, alpha=0.8, linetype="dashed") +
+    geom_vline(xintercept=as.numeric(as.Date("2021-11-23")), linetype="dashed") +
+    facet_wrap(vars(abs_name)) +
+    theme_clean() + 
+    scale_colour_tableau() + # from ggthemes
+    labs(
+        title = "Forecast and Actual growth rate of second Covid vaccination % by SA LGA",
+        subtitle = "Data sourced from https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf",
+        caption =  "6 November 2021 by @morebento",
+        y = "Second Dose %",
+        x = "Date",
+        colour = "Data Type"
+    )
+    
+```
+
+## Expected rates for differing LGAs chart
+
+```{r  message=FALSE, warning=FALSE, paged.print=TRUE}
+combined_tbl %>%
+    filter(
+        abs_name %in% c("Playford (C)", "Burnside (C)", "Berri and Barmera (DC)", "Mount Gambier (C)", "Salisbury (C)", "Yorke Peninsula (DC)")
+    ) %>%
+    ggplot(aes(abs_name, date_as_at)) +
+    geom_line() +
+    geom_label(aes(label=air_second_dose_pct, fill = type), size=3) +
+    theme_clean() + 
+    scale_fill_tableau() + # from ggthemes
+    
+    geom_hline(yintercept=as.numeric(as.Date("2021-11-23")), linetype="dashed") +
+    coord_flip() +
+    labs(
+        title = "Forecast and Actual expected rates for second Covid vaccination % by SA LGA",
+        caption =  "Data sourced from https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf 6 November 2021 by @morebento",
+        y = "Date",
+        x = "",
+        fill = "Type"
+    )
+    
+```
+
+## Forecast second dose % by LGA for 23 Nov Chart
+
+```{r  message=FALSE, warning=FALSE, paged.print=TRUE}
+
+# get population data
+lga_pop_tbl <- read_csv("https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv") %>% 
+    clean_names() %>%
+    filter(state == "SA") %>%
+    slice_max(date_as_at) %>%
+    select(abs_name, abs_erp_2019_population) 
+
+
+predicted_vax_rates_tidy_tbl %>%
+    ungroup() %>%
+    inner_join(lga_pop_tbl) %>%
+    filter(
+        abs_name != "Grant (DC)"
+    ) %>%
+    mutate(
+        above_80 = if_else(air_second_dose_pct >= 80, "Yes", "No")
+    ) %>%
+    mutate(
+        abs_name = fct_reorder(abs_name, air_second_dose_pct)
+    ) %>%
+    ggplot(aes(abs_name, air_second_dose_pct)) +
+    geom_point(aes(colour=above_80, size=abs_erp_2019_population)) +
+    scale_size_continuous(labels=comma) +
+    theme_clean() + 
+    scale_colour_tableau() + # from ggthemes
+    coord_flip() +
+    labs(
+        title = "Forecast COVID Vaccination Second Dose % by LGA for 23 November 2021",
+        subtitle = "xx",
+        caption =  "Data sourced from https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf 1 November 2021 by @morebento",
+        y = "Second Dose %",
+        x = "",
+        colour = "Above 80% Second Dose",
+        size = "ABS 2019 Population"
+    )
+
+```
+
+## High risk LGAs for 23 Nov Chart
+
+```{r  message=FALSE, warning=FALSE, paged.print=TRUE}
+
+# get high risk lgas
+high_risk_lgas <- predicted_vax_rates_tidy_tbl %>%
+    inner_join(lga_pop_tbl) %>%
+    filter(
+        abs_erp_2019_population > 50000,
+        air_second_dose_pct < 80
+    ) %>%
+    pull(abs_name)
+
+
+predicted_vax_rates_tidy_tbl %>%
+    filter(
+        abs_name != "Grant (DC)"
+    ) %>%
+    inner_join(lga_pop_tbl) %>%
+    mutate(
+        above_80 = if_else(air_second_dose_pct >= 80, "Yes", "No")
+    ) %>%
+    select(abs_name, air_second_dose_pct, abs_erp_2019_population, above_80) %>%
+    ggplot(aes(air_second_dose_pct, abs_erp_2019_population, label=abs_name)) +
+    geom_point(aes(colour=above_80)) +
+    scale_y_continuous(labels=comma_format()) +
+    geom_vline(xintercept = 80, linetype="dashed") +
+    geom_label_repel(data = subset(predicted_vax_rates_tidy_tbl %>% inner_join(lga_pop_tbl), abs_name %in% high_risk_lgas), size=3) +
+    scale_colour_tableau() +
+    theme_clean() +
+    labs(
+        title = "Scatter plot of Forecast COVID Vaccination Second Dose % for SA LGAs at 23 November 2021",
+        caption =  "Data sourced from https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf 1 November 2021 by @morebento",
+        y = "ABS 2019 Population",
+        x = "Predicted % Second Dose",
+        colour = "Above 80% Double Vax Rate"
+    )
+
+
+```
+
+
+# Conclusions
+
+1. Regression modelling has a good fit (between 95% and 99%) for this particular scenario
+2. 
