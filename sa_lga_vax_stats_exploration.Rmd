@@ -83,6 +83,12 @@ Ok so the data is now good to move onto the next step
 As the data has a date column for the vaccination rate, this can be used to examine the change in rate over time. In the example below, the LGAs for Adelaide, Mt Gambier and Playford are selected and then their data plotted against date.
 
 ```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+
+
+# create a standard caption footer
+plot_footer <- stringr::str_glue("Author: @morebento. Code: https://github.com/morebento/sa_lga_vaccination_stats")
+
+
 air_tidy_tbl %>%
     filter(abs_name %in% c("Adelaide (C)", "Playford (C)", "Mount Gambier (C)")) %>%
     ggplot(aes(x=date_as_at)) +
@@ -97,7 +103,7 @@ air_tidy_tbl %>%
         x = "Date",
         y = "%",
         colour = "Dose",
-        caption = "Data from https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv by @morebento"
+        caption = plot_footer
     )
     
 
@@ -129,7 +135,7 @@ air_tidy_tbl %>%
     labs(
         title = "Histogram of SA LGAs by percentage of population vaccinated by dose count",
         subtitle = "Data binned into deciles",
-        caption = "Data from https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv by @morebento",
+        caption = plot_footer,
         fill = "Dose",
         x = "%",
         y = "Count of LGAs"
@@ -143,6 +149,11 @@ As can be seen, there is quite a spread of values, with many LGAs below the 80% 
 
 # Hypothesis Formulation
 
+A could of hypotheses can be made here
+
+1. The spread of vaccination rates for LGAs varies widely
+2. A particular LGAs vaccination % may be quite different from the state mean
+3. the rate of increase of vaccination for a LGA is fairly constant and should able to be modelled and used to predict dates or vaccination levels
 
 
 # Modelling
@@ -372,7 +383,7 @@ predicted_dates_tbl %>%
     labs(
         title = "Histogram of SA LGAs regression Adjusted R Squared",
         subtitle = "Data binned into deciles",
-        caption = "Data from https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv by @morebento",
+        caption = plot_footer,
         x = "Adjusted R Squared",
         y = "Count"
     )
@@ -511,6 +522,8 @@ Now that predictions have been made for the dates at which certain vaccination r
 
 ## Forecast and Actual Growth Chart
 
+This chart shows the predicted and actual dates at which the vaccination rates will be reached 
+
 ```{r  message=FALSE, warning=FALSE, paged.print=TRUE}
 combined_tbl %>%
     filter(
@@ -528,8 +541,7 @@ combined_tbl %>%
     scale_colour_tableau() + # from ggthemes
     labs(
         title = "Forecast and Actual growth rate of second Covid vaccination % by SA LGA",
-        subtitle = "Data sourced from https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf",
-        caption =  "6 November 2021 by @morebento",
+        caption =  plot_footer,
         y = "Second Dose %",
         x = "Date",
         colour = "Data Type"
@@ -538,6 +550,8 @@ combined_tbl %>%
 ```
 
 ## Expected rates for differing LGAs chart
+
+This chart also shows the predicted and actual dates at which the defined vaccination rates will be reached, in a different format
 
 ```{r  message=FALSE, warning=FALSE, paged.print=TRUE}
 combined_tbl %>%
@@ -554,7 +568,7 @@ combined_tbl %>%
     coord_flip() +
     labs(
         title = "Forecast and Actual expected rates for second Covid vaccination % by SA LGA",
-        caption =  "Data sourced from https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf 6 November 2021 by @morebento",
+        caption =  plot_footer,
         y = "Date",
         x = "",
         fill = "Type"
@@ -563,6 +577,8 @@ combined_tbl %>%
 ```
 
 ## Forecast second dose % by LGA for 23 Nov Chart
+
+This chart shows the spread of vaccination rates expected by the 23rd of November 2021, sorted by vaccination rate and coloured by whether the LGA has reached 80%. The population of the LGA, from the 2019 census is also included.
 
 ```{r  message=FALSE, warning=FALSE, paged.print=TRUE}
 
@@ -573,7 +589,7 @@ lga_pop_tbl <- read_csv("https://vaccinedata.covid19nearme.com.au/data/geo/air_l
     slice_max(date_as_at) %>%
     select(abs_name, abs_erp_2019_population) 
 
-
+# plot the chart
 predicted_vax_rates_tidy_tbl %>%
     ungroup() %>%
     inner_join(lga_pop_tbl) %>%
@@ -594,8 +610,7 @@ predicted_vax_rates_tidy_tbl %>%
     coord_flip() +
     labs(
         title = "Forecast COVID Vaccination Second Dose % by LGA for 23 November 2021",
-        subtitle = "xx",
-        caption =  "Data sourced from https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf 1 November 2021 by @morebento",
+        caption =  plot_footer,
         y = "Second Dose %",
         x = "",
         colour = "Above 80% Second Dose",
@@ -606,9 +621,12 @@ predicted_vax_rates_tidy_tbl %>%
 
 ## High risk LGAs for 23 Nov Chart
 
+This chart displays the vaccination % of each LGA vs the population of that LGA, colour coded by whether they have reached 80%. Those that have been defined as potentiallly high risk (low vaccination %, higher population) are labelled particularly.
+
+
 ```{r  message=FALSE, warning=FALSE, paged.print=TRUE}
 
-# get high risk lgas
+# get high risk lgas, defined as those with vaccination < 80% and a population > 50k
 high_risk_lgas <- predicted_vax_rates_tidy_tbl %>%
     inner_join(lga_pop_tbl) %>%
     filter(
@@ -617,7 +635,7 @@ high_risk_lgas <- predicted_vax_rates_tidy_tbl %>%
     ) %>%
     pull(abs_name)
 
-
+# plot the chart - excluding the Grant District Council
 predicted_vax_rates_tidy_tbl %>%
     filter(
         abs_name != "Grant (DC)"
@@ -636,7 +654,7 @@ predicted_vax_rates_tidy_tbl %>%
     theme_clean() +
     labs(
         title = "Scatter plot of Forecast COVID Vaccination Second Dose % for SA LGAs at 23 November 2021",
-        caption =  "Data sourced from https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf 1 November 2021 by @morebento",
+        caption =  plot_footer,
         y = "ABS 2019 Population",
         x = "Predicted % Second Dose",
         colour = "Above 80% Double Vax Rate"
@@ -648,5 +666,8 @@ predicted_vax_rates_tidy_tbl %>%
 
 # Conclusions
 
+A few concluding points 
+
 1. Regression modelling has a good fit (between 95% and 99%) for this particular scenario
-2. 
+2. The regression model can successfully predict future vaccination % for different dates for LGAs as well as being able to predict the dates at which certain LGAs hit particular vaccination rates
+3. The spread of vaccination rates (%) continues to be wide for differing LGAs for the predicted dates and rates
