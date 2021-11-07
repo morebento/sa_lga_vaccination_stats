@@ -18,11 +18,11 @@ Plots are found in the `plots` directory
 
 ## To Do
 
-1. R Markdown notebook describing approach and statistics - Done
-2. Date vs Vax rate modelling & visualisation - Done
-3. Vax rate vs Date modelling & visualisation - Done
+1. ~~R Markdown notebook describing approach and statistics~~ - Done
+2. ~~Date vs Vax rate modelling & visualisation~~ - Done
+3. ~~Vax rate vs Date modelling & visualisation~~ - Done
 4. Shiny dashboard
-5. Vax rate vs ABS inequality & visualisation
+5. ~~Vax rate vs ABS inequality & visualisation~~ - Done
 
 
 
