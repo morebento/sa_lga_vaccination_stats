@@ -13,6 +13,18 @@ For this exercise the data from the <https://covid19nearme.com.au/vaccination-st
 
 The rendered version of the R Markdown file is published here <https://rpubs.com/morebento/SA_LGA_vax_stats_exploration>
 
+Plots are found in the `plots` directory
+
+
+## To Do
+
+1. R Markdown notebook describing approach and statistics - Done
+2. Date vs Vax rate modelling & visualisation - Done
+3. Vax rate vs Date modelling & visualisation - Done
+4. Shiny dashboard
+5. Vax rate vs ABS inequality & visualisation
+
+
 
 ## Author
 
