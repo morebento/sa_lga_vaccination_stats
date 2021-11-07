@@ -1,9 +1,12 @@
-#'
-#'
-#'
-#'
+#' predict_dates_from_vax_rates.R
+#' 
+#' predicts dates at which certain vax rates occur and plots visualisation
+#' 
+#' ben moretti
+#' 7 november 2021
 #'
 
+# setup -------------------------------
 
 # first some libraries
 library(tidyverse)
@@ -14,16 +17,22 @@ library(broom)
 library(scales)
 library(lubridate)
 
+
+# gather data  -------------------------------
+
 # read the data from csv and clean the names
 air_tbl <- read_csv("https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv") %>% 
     clean_names()
 
+
+# tidy -------------------------------
 
 air_tidy_tbl <- air_tbl %>%
     filter(state == "SA") %>%
     select(date_as_at, state, abs_name, air_first_dose_pct:abs_erp_2019_population) %>%
     drop_na(air_second_dose_pct)
 
+# condition --------------------------
 
 # get the latest date
 max_date <- air_tidy_tbl %>%
@@ -49,6 +58,8 @@ p <- tribble(
     80,
     90
 )
+
+# model ------------------------------------
 
 # nest
 air_nested_tbl <- air_tidy_tbl %>%
@@ -125,9 +136,9 @@ forecast_lga_vax_rates_by_date_linechart_plot <- combined_tbl %>%
     filter(abs_name != "Grant (DC)") %>%
     ggplot(aes(abs_name, date_as_at)) +
     geom_line() +
-    geom_label(aes(label=air_second_dose_pct, fill = type), size=3) +
+    geom_label(aes(label=air_second_dose_pct, colour = type), size=3) +
     theme_clean() + 
-    scale_fill_tableau() + # from ggthemes
+    scale_colour_tableau() + # from ggthemes
     geom_hline(yintercept=as.numeric(as.Date("2021-11-23")), linetype="dashed") +
     coord_flip() +
     labs(
@@ -142,7 +153,7 @@ forecast_lga_vax_rates_by_date_linechart_plot <- combined_tbl %>%
 ggsave(
     forecast_lga_vax_rates_by_date_linechart_plot, 
     filename = "plots/forecast_lga_vax_rates_by_date_linechart_plot.png", 
-    width=210, 
-    height=297, 
+    width=297, 
+    height=210, 
     units = "mm"
 )

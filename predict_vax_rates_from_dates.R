@@ -118,8 +118,8 @@ forecast_vax_rates_opening_day_plot <- predicted_vax_rates_tidy_tbl %>%
 ggsave(
     forecast_vax_rates_opening_day_plot, 
     filename = "plots/forecast_vax_rates_opening_day_plot.png", 
-    width=210 * 1.2, 
-    height=297 * 1.2, 
+    width=297, 
+    height=210, 
     units = "mm"
 )
 
