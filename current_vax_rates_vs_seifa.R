@@ -114,9 +114,9 @@ current_seifa_vs_vax_rate_plot <- predicted_tbl %>%
     filter(abs_name != "Grant (DC)") %>%
     ggplot(aes(x=seifa_score, y=air_second_dose_pct, label=abs_name)) +
     geom_point(aes(size=population)) +
-    #geom_line(aes(x=seifa_score, y=predicted_air_second_dose_pct), alpha=0.8, linetype="dashed") +
-    #geom_smooth(se=FALSE) +
-    geom_label_repel(data = subset(selected_sa_tbl, abs_name %in% labels), size=3) +
+    scale_size_continuous(labels=comma) +
+    geom_line(aes(x=seifa_score, y=predicted_air_second_dose_pct), alpha=0.8, linetype="dashed") +
+    geom_label_repel(size=3) +
     ylim(0,100) +
     theme_clean() + 
     scale_colour_tableau() + # from ggthemes
