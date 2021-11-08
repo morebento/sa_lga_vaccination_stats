@@ -126,4 +126,4 @@ sorted_scatter_plot <- air_tidy_tbl %>%
     )
 
 # save plot to plots directory
-ggsave(sorted_scatter_plot, filename = "plots/current_sorted_scatter_plot.png", width=210, height=297, units = "mm")
+ggsave(sorted_scatter_plot, filename = "plots/current_sorted_scatter_plot.png", width=297, height=210, units = "mm")

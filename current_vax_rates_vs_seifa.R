@@ -1,3 +1,17 @@
+#' current_vax_rates_vs_seifa.R
+#'
+#' inspired by this post below
+#' https://www.reddit.com/r/Adelaide/comments/qk8p2w/comment/hiv2z3h/?utm_source=share&utm_medium=web2x&context=3
+#'
+#' SEIFA data https://www.abs.gov.au/websitedbs/censushome.nsf/home/seifa
+#'
+#' downloadable here 
+#' https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/2033.0.55.0012016?OpenDocument 
+#'
+#' ben moretti
+#' 8 november 2021
+
+
 # setup -------------------------------
 
 library(tidyverse)
@@ -24,7 +38,6 @@ max_date <- air_tbl %>%
         max_date_as_at = max(date_as_at)
     ) %>%
     pull(max_date_as_at)
-
 
 
 # seifa data is availabel from here 
@@ -63,35 +76,36 @@ selected_sa_tbl <- combined_tbl %>%
     select(date_as_at, abs_name, air_second_dose_pct, seifa_score, population) %>%
     drop_na(air_second_dose_pct, seifa_score) 
 
+# get a list of LGAs with high or low seifa scores for labelling
 labels <- seifa_excel_tbl %>%
     filter(
         seifa_score > 1050 | seifa_score < 900
     ) %>%
     pull(abs_name)
 
-
-
-
-
     
-
 # model --------------------------------
 
 # regress
 lm_fit <- lm(air_second_dose_pct ~ seifa_score, data = selected_sa_tbl)
 
+# examine the regression statistics - adjusted r squared is only 0.507
 glance(lm_fit)
 
+# look at predicted vs actual plus residuals
 augment(lm_fit)
 
+# examine the lm object
 tidy(lm_fit)
 
+# fit the values to the model to get a line for regression  and bind back onto the original data
 predicted_tbl <- predict(lm_fit, newdata = selected_sa_tbl) %>%
     as_tibble() %>%
     rename(
         predicted_air_second_dose_pct = value
     ) %>%
-    bind_cols(selected_sa_tbl)
+    bind_cols(selected_sa_tbl) %>%
+    select(date_as_at:population, predicted_air_second_dose_pct)
 
 # visualise ------------------------------------------------------
 
@@ -100,14 +114,15 @@ current_seifa_vs_vax_rate_plot <- predicted_tbl %>%
     filter(abs_name != "Grant (DC)") %>%
     ggplot(aes(x=seifa_score, y=air_second_dose_pct, label=abs_name)) +
     geom_point(aes(size=population)) +
-    geom_line(aes(x=seifa_score, y=predicted_air_second_dose_pct), alpha=0.8, linetype="dashed") +
+    #geom_line(aes(x=seifa_score, y=predicted_air_second_dose_pct), alpha=0.8, linetype="dashed") +
+    #geom_smooth(se=FALSE) +
     geom_label_repel(data = subset(selected_sa_tbl, abs_name %in% labels), size=3) +
     ylim(0,100) +
     theme_clean() + 
     scale_colour_tableau() + # from ggthemes
     labs(
         title = "SEIFA Score vs Actual second Covid vaccination % by SA LGA",
-        subtitle = "SEIFA Score: ABS State Suburb (SSC) Index of Relative Socio-economic Disadvantage, 2016",
+        subtitle = "SEIFA Data: ABS State Suburb (SSC) Index of Relative Socio-economic Disadvantage, 2016",
         caption =  plot_footer,
         y = "Second Dose %",
         x = "SEIFA Score" 

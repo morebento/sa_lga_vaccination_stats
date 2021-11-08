@@ -8,6 +8,7 @@ library(ggrepel)
 library(broom)
 library(scales)
 library(lubridate)
+library(readxl)
 
 # read the data from csv and clean the names
 air_tbl <- read_csv("https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv") %>% 
@@ -167,3 +168,38 @@ ggsave(
     height=210, 
     units = "mm"
 )
+
+# histogram of predicted
+forecast_histogram_lga_plot <- predicted_vax_rates_tidy_tbl %>%
+    filter(abs_name != "Grant (DC)") %>%
+    ggplot(aes(air_second_dose_pct)) +
+    geom_histogram(bins = 10) +
+    geom_vline(xintercept=50, linetype="dashed", aes(colour="lightgray")) +
+    geom_vline(xintercept=70, linetype="dashed", aes(colour="lightgray")) +
+    geom_vline(xintercept=80, linetype="dashed", aes(colour="lightgray")) +
+    theme_clean() + 
+    scale_fill_tableau() + # from ggthemes
+    labs(
+        title = "Histogram of SA LGAs by percentage of population vaccinated by forecast dose % at 23 November 2021",
+        subtitle = "Data binned into deciles",
+        caption = plot_footer,
+        fill = "Dose",
+        x = "%",
+        y = "Count of LGAs"
+    )
+
+ggsave(
+    forecast_histogram_lga_plot, 
+    filename = "plots/forecast_histogram_lga_plot.png", 
+    width=297, 
+    height=210, 
+    units = "mm"
+)
+
+# export ------------------------
+
+predicted_vax_rates_tidy_tbl %>%
+    mutate(
+        date_as_at = as_date(date_as_at)
+    ) %>%
+    write_csv("data/predicted_vax_rates_23nov2021.csv")

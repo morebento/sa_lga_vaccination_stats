@@ -106,6 +106,14 @@ combined_tbl <- air_tidy_tbl %>%
         abs_name, date_as_at
     )
 
+# export ------------------------
+
+combined_tbl %>%
+    mutate(
+        date_as_at = as_date(date_as_at)
+    ) %>%
+    write_csv("data/predicted_and_actual_dates_vs_vax_rates.csv")
+
 # visualise ----------------------
 
 forecast_lga_vax_rates_by_date_plot <- combined_tbl %>%
@@ -129,7 +137,7 @@ forecast_lga_vax_rates_by_date_plot <- combined_tbl %>%
     )
 
 # save plot to plots directory
-ggsave(forecast_lga_vax_rates_by_date_plot, filename = "plots/forecast_lga_vax_rates_by_date.png", width=297 * 2, height=210 * 2, units = "mm")
+ggsave(forecast_lga_vax_rates_by_date_plot, filename = "plots/forecast_lga_vax_rates_by_date.png", width=297, height=210, units = "mm")
 
 # forecast lga vax rates by date line chart plot
 forecast_lga_vax_rates_by_date_linechart_plot <- combined_tbl %>%
