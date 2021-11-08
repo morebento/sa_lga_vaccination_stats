@@ -17,6 +17,16 @@ library(httr)
 air_tbl <- read_csv("https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv") %>% 
     clean_names()
 
+# get the latest date
+max_date <- air_tbl %>%
+    slice_max(date_as_at) %>%
+    summarise(
+        max_date_as_at = max(date_as_at)
+    ) %>%
+    pull(max_date_as_at)
+
+
+
 # seifa data is availabel from here 
 # https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/2033.0.55.0012016?OpenDocument
 
@@ -92,6 +102,7 @@ current_seifa_vs_vax_rate_plot <- predicted_tbl %>%
     geom_point(aes(size=population)) +
     geom_line(aes(x=seifa_score, y=predicted_air_second_dose_pct), alpha=0.8, linetype="dashed") +
     geom_label_repel(data = subset(selected_sa_tbl, abs_name %in% labels), size=3) +
+    ylim(0,100) +
     theme_clean() + 
     scale_colour_tableau() + # from ggthemes
     labs(
