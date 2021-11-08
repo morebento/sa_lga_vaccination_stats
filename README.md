@@ -9,6 +9,8 @@ The South Australian Government has announced lifting of various COVID restricti
 
 For this exercise the data from the <https://covid19nearme.com.au/vaccination-stats> will be used. These excellent people have written scraper, parser and data visualisation code for all of the Australian governments' COVID data. All of their code is published here <https://github.com/jxeeno/aust-govt-covid19-vaccine-pdf> and the collated vaccination data is published here <https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv> in CSV format, and this is the source for this exercise. 
 
+Note that for the LGAs the data is for age 15+ 
+
 ## Published 
 
 The rendered version of the R Markdown file is published here <https://rpubs.com/morebento/SA_LGA_vax_stats_exploration>
