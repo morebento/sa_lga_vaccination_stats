@@ -121,15 +121,15 @@ forecast_lga_vax_rates_by_date_plot <- combined_tbl %>%
     ggplot(aes(date_as_at, air_second_dose_pct)) +
     geom_line(aes(colour=type)) +
     geom_point(aes(colour=type)) +
-    geom_hline(yintercept = 50, alpha=0.8, linetype="dashed") +
-    geom_hline(yintercept = 70,alpha=0.8, linetype="dashed") +
     geom_hline(yintercept = 80, alpha=0.8, linetype="dashed") +
+    geom_hline(yintercept = 90, alpha=0.8, linetype="dashed") +
     geom_vline(xintercept=as.numeric(as.Date("2021-11-23"))) +
     facet_wrap(vars(abs_name)) +
     theme_clean() + 
     scale_colour_tableau() + # from ggthemes
     labs(
         title = "Forecast and Actual growth rate of second Covid vaccination % by SA LGA",
+        subtitle = "Horizontal lines at 80% and 90% vaccination",
         caption =  plot_footer,
         y = "Second Dose %",
         x = "Date",
