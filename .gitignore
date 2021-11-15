@@ -47,3 +47,6 @@ README.html
 # all html files
 *.html
 *.htm
+
+# mac files
+.DS_Store
