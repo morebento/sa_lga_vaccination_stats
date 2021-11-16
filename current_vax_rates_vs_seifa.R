@@ -73,11 +73,13 @@ combined_tbl <- inner_join(air_tbl, seifa_excel_tbl)
 selected_sa_tbl <- combined_tbl %>%
     slice_max(date_as_at) %>%
     filter(state == "SA") %>%
+    filter(str_detect(abs_name, "\\(C\\)")) %>%
+    filter(abs_name != "Grant (DC)") %>%
     select(date_as_at, abs_name, air_second_dose_pct, seifa_score, population) %>%
     drop_na(air_second_dose_pct, seifa_score) 
 
 # get a list of LGAs with high or low seifa scores for labelling
-labels <- seifa_excel_tbl %>%
+labels <- selected_sa_tbl %>%
     filter(
         seifa_score > 1050 | seifa_score < 900
     ) %>%
@@ -111,7 +113,7 @@ predicted_tbl <- predict(lm_fit, newdata = selected_sa_tbl) %>%
 
 # plot
 current_seifa_vs_vax_rate_plot <- predicted_tbl %>%
-    filter(abs_name != "Grant (DC)") %>%
+
     ggplot(aes(x=seifa_score, y=air_second_dose_pct, label=abs_name)) +
     geom_point(aes(size=population)) +
     scale_size_continuous(labels=comma) +
@@ -121,7 +123,7 @@ current_seifa_vs_vax_rate_plot <- predicted_tbl %>%
     theme_clean() + 
     scale_colour_tableau() + # from ggthemes
     labs(
-        title = "SEIFA Score vs Actual second Covid vaccination % by SA LGA",
+        title = "SEIFA Score vs Actual second Covid vaccination % by SA LGA (Metro Councils)",
         subtitle = "SEIFA Data: ABS State Suburb (SSC) Index of Relative Socio-economic Disadvantage, 2016",
         caption =  plot_footer,
         y = "Second Dose %",
