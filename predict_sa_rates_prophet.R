@@ -131,3 +131,13 @@ ggsave(
     height=210, 
     units = "mm"
 )
+
+
+# save to disc
+ggsave(
+    plot=actual_forecast_plot, 
+    filename = "plots/forecast_sa_vax_dates_prophet.pdf", 
+    width=297, 
+    height=210, 
+    units = "mm"
+)
