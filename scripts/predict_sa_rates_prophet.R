@@ -41,6 +41,7 @@ sa_data_tbl <- data_tbl %>%
         validated, url
     ) 
 
+sa_data_tbl %>% glimpse()
 
 # get the data into the format prophet uses
 data_prophet_tbl <- sa_data_tbl %>%
