@@ -1,36 +1,267 @@
 ---
 title: "SA LGA Vaccination Stats and Forecasts Dashbaord"
+author: "Ben Moretti"
+date: "22 November 2021"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    social: menu
+    source_code: embed
 ---
 
 ```{r setup, include=FALSE}
+
+
+# libraries -----------------------------------------------------
 library(flexdashboard)
+library(tidyverse)
+library(janitor)
+library(ggthemes)
+library(ggrepel)
+library(broom)
+library(scales)
+library(lubridate)
+library(plotly)
+library(readxl)
+library(httr)
+
+
+# definitions ----------------------------------------------------------
+
+# define source url
+air_lga_url <- "https://vaccinedata.covid19nearme.com.au/data/geo/air_lga.csv"
+
+
+# seifa data is availabel from here 
+# https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/2033.0.55.0012016?OpenDocument
+
+# this is the url for the excel spreadsheet
+seifa_url <- "https://www.abs.gov.au/ausstats/subscriber.nsf/log?openagent&2033055001%20-%20lga%20indexes.xls&2033.0.55.001&Data%20Cubes&5604C75C214CD3D0CA25825D000F91AE&0&2016&27.03.2018&Latest"
+
+
+# gather data -----------------------------------------------------
+
+# read the data from csv and clean the names
+air_lga_tbl <- read_csv(air_lga_url) %>% 
+    clean_names()
+
+
+# download seifa file
+GET(seifa_url, write_disk(tf <- tempfile(fileext = ".xls")))
+
+# import Table 2 State Suburb (SSC) Index of Relative Socio-economic Disadvantage, 2016
+seifa_excel <- read_excel(tf, sheet = 3, range = "B6:D13697", )
+
+
+
+
+# tidy data --------------------------------------------------------
+
+# tidy the data - only for SA records
+air_sa_tidy_tbl <- air_lga_tbl %>%
+    filter(state == "SA") %>%
+    filter(! abs_name %in% c("Grant (DC)")) %>%
+    select(date_as_at, state, abs_name, air_first_dose_pct:abs_erp_2019_population) %>%
+    drop_na(air_second_dose_pct)
+
+# get the latest date
+max_date <- air_sa_tidy_tbl %>%
+    slice_max(date_as_at) %>%
+    summarise(
+        max_date_as_at = max(date_as_at)
+    ) %>%
+    pull(max_date_as_at)
+
+# get population data
+sa_lga_pop_tbl <- air_lga_tbl %>%
+    filter(state == "SA") %>%
+    filter(! abs_name %in% c("Grant (DC)")) %>%
+    slice_max(date_as_at) %>%
+    select(abs_name, abs_erp_2019_population) 
+
+
+# condition and rename seifa data
+seifa_excel_tbl <- seifa_excel %>%
+    rename(
+        abs_name = `...1`,
+        population = `...2`,
+        seifa_score = Score
+    )
+
+
+
+# create a standard caption footer
+plot_footer <- stringr::str_glue("Latest Data: {max_date} Author: @morebento. Code: https://github.com/morebento/sa_lga_vaccination_stats")
+
 ```
 
-Column {data-width=650}
+Inputs {.sidebar}
 -----------------------------------------------------------------------
 
-### Chart A
+intro comments
 
-```{r}
 
-```
+intro comments
 
-Column {data-width=350}
+
+intro comments
+
+
+intro comments
+
+
+intro comments
+
+
+
+
+Column
 -----------------------------------------------------------------------
 
-### Chart B
 
-```{r}
+### Histogram
+
+```{r fig.height=4, fig.width=6}
+
+
+# plot ------------------------------------
+
+# manipulate data for plotly
+histogram_data_plotly_tbl <- air_sa_tidy_tbl %>%
+    slice_max(date_as_at) %>%  
+    select(abs_name, air_second_dose_pct, air_first_dose_pct) 
+
+# create histogram as plotly
+histogram_data_plotly_tbl %>%
+  plot_ly(alpha = 0.6) %>%
+  add_histogram(
+    x = ~air_first_dose_pct, 
+    name = "First Dose (%)",
+    bingroup = 10
+  ) %>%
+  add_histogram(
+    x = ~air_second_dose_pct, 
+    name = "Second Dose (%)",
+    bingroup = 10
+  ) %>%
+  layout(
+    title = "Histogram of SA LGAs by percentage of population vaccinated by dose count",
+    yaxis = list(title = "Count"),
+    xaxis = list(title = "Percentage Vaccinated (%)"),
+    barmode = "overlay",
+    legend = list(title = list(text = "<b>Dose</b>")),
+    showlegend = TRUE
+  )
+
 
 ```
 
-### Chart C
+
+
+### SEIFA 
+
 
 ```{r}
 
+# join the seifa data to the latest tidied  
+air_sa_seifa_merged_tbl <- inner_join(
+  air_sa_tidy_tbl %>%
+    slice_max(date_as_at), 
+  seifa_excel_tbl) %>%
+  select(date_as_at, abs_name, air_second_dose_pct, seifa_score, abs_erp_2019_population) 
+
+
+# model --------------------------------
+
+# regress
+seifa_lm_fit <- lm(air_second_dose_pct ~ seifa_score, data = air_sa_seifa_merged_tbl)
+
+# fit the values to the model to get a line for regression  and bind back onto the original data
+seifa_predicted_tbl <- predict(seifa_lm_fit, newdata = air_sa_seifa_merged_tbl) %>%
+    as_tibble() %>%
+    rename(
+        predicted_air_second_dose_pct = value
+    ) %>%
+    bind_cols(air_sa_seifa_merged_tbl) %>%
+    select(date_as_at:abs_erp_2019_population, predicted_air_second_dose_pct)
+
+# plot -----------------------------------
+
+seifa_predicted_tbl %>%
+  # the base bubble chart
+  plot_ly(
+    y = ~air_second_dose_pct,
+    x = ~seifa_score,
+    text = ~abs_name,
+    type = 'scatter',
+    mode = 'markers',
+    size = ~abs_erp_2019_population,
+    name = "LGA"
+  ) %>%
+  # add the regression line
+  add_lines(
+    name = "Regression",
+    x = ~seifa_score,
+    y = ~predicted_air_second_dose_pct,
+    line = list(
+      dash = "dash"
+    )
+  ) %>%
+  
+  # layout specifics
+  layout(
+    title = "SEIFA Score vs Actual second Covid vaccination % by SA LGA (Metro Councils)",
+    yaxis = list(
+      title = "Second Dose %", 
+      range = list(0, 100)
+    ),
+    xaxis = list(title = "SEIFA Score")
+  )
+
+
 ```
+
+Column
+-----------------------------------------------------------------------
+
+
+
+### Scatter Plot
+
+```{r}
+# prepare data for plotly
+scatterplot_data_plotly_tbl <- air_sa_tidy_tbl %>%
+    slice_max(date_as_at) %>%  
+    inner_join(sa_lga_pop_tbl) %>%
+    mutate(
+        above_80 = if_else(air_second_dose_pct >= 80, "Yes", "No")
+    ) %>%
+    mutate(
+        abs_name = fct_reorder(abs_name, air_second_dose_pct)
+    )
+
+# plot it 
+scatterplot_data_plotly_tbl %>%
+  plot_ly(
+    y = ~abs_name,
+    x = ~air_second_dose_pct,
+    text = ~abs_erp_2019_population,
+    type = 'scatter',
+    mode = 'markers',
+    size = ~abs_erp_2019_population,
+    color = ~above_80
+  ) %>%
+  layout(
+    title = "COVID Vaccination Second Dose % by LGA",
+    xaxis = list(title = "Second Dose %"),
+    yaxis = list(title = ""),
+    legend = list(title = list(text = "<b>Above 80% Second Dose</b>")),
+    showlegend = TRUE
+  )
+
+
+```
+
+
 

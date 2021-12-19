@@ -1,44 +1,50 @@
 date_as_at,abs_name,air_second_dose_pct,type
-2021-08-19,Adelaide (C),30,Predicted
+2021-08-16,Adelaide (C),30,Predicted
 2021-08-27,Adelaide (C),36.1,Actual
+2021-09-04,Adelaide (C),40,Predicted
 2021-09-05,Adelaide (C),39.4,Actual
-2021-09-06,Adelaide (C),40,Predicted
 2021-09-12,Adelaide (C),42.5,Actual
 2021-09-19,Adelaide (C),46.2,Actual
 2021-09-24,Adelaide (C),50,Predicted
 2021-09-26,Adelaide (C),50.7,Actual
 2021-10-03,Adelaide (C),55.5,Actual
 2021-10-10,Adelaide (C),59.4,Actual
-2021-10-12,Adelaide (C),60,Predicted
+2021-10-13,Adelaide (C),60,Predicted
 2021-10-17,Adelaide (C),62.9,Actual
 2021-10-24,Adelaide (C),66.8,Actual
-2021-10-30,Adelaide (C),70,Predicted
 2021-10-31,Adelaide (C),71.3,Actual
+2021-11-01,Adelaide (C),70,Predicted
 2021-11-07,Adelaide (C),75,Actual
 2021-11-14,Adelaide (C),78.1,Actual
-2021-11-17,Adelaide (C),80,Predicted
 2021-11-21,Adelaide (C),81.1,Actual
-2021-12-05,Adelaide (C),90,Predicted
-2021-08-04,Adelaide Hills (DC),30,Predicted
-2021-08-23,Adelaide Hills (DC),40,Predicted
+2021-11-21,Adelaide (C),80,Predicted
+2021-11-28,Adelaide (C),83.4,Actual
+2021-12-05,Adelaide (C),85.1,Actual
+2021-12-10,Adelaide (C),90,Predicted
+2021-12-12,Adelaide (C),86.6,Actual
+2021-08-01,Adelaide Hills (DC),30,Predicted
+2021-08-20,Adelaide Hills (DC),40,Predicted
 2021-08-27,Adelaide Hills (DC),41.2,Actual
 2021-09-05,Adelaide Hills (DC),46.8,Actual
-2021-09-10,Adelaide Hills (DC),50,Predicted
+2021-09-09,Adelaide Hills (DC),50,Predicted
 2021-09-12,Adelaide Hills (DC),51.1,Actual
 2021-09-19,Adelaide Hills (DC),55.2,Actual
 2021-09-26,Adelaide Hills (DC),59.5,Actual
-2021-09-28,Adelaide Hills (DC),60,Predicted
+2021-09-29,Adelaide Hills (DC),60,Predicted
 2021-10-03,Adelaide Hills (DC),63.1,Actual
 2021-10-10,Adelaide Hills (DC),66.5,Actual
 2021-10-17,Adelaide Hills (DC),70.6,Actual
-2021-10-17,Adelaide Hills (DC),70,Predicted
+2021-10-18,Adelaide Hills (DC),70,Predicted
 2021-10-24,Adelaide Hills (DC),74.2,Actual
 2021-10-31,Adelaide Hills (DC),78.1,Actual
-2021-11-04,Adelaide Hills (DC),80,Predicted
 2021-11-07,Adelaide Hills (DC),81.7,Actual
+2021-11-07,Adelaide Hills (DC),80,Predicted
 2021-11-14,Adelaide Hills (DC),85,Actual
 2021-11-21,Adelaide Hills (DC),87.9,Actual
-2021-11-22,Adelaide Hills (DC),90,Predicted
+2021-11-26,Adelaide Hills (DC),90,Predicted
+2021-11-28,Adelaide Hills (DC),90.4,Actual
+2021-12-05,Adelaide Hills (DC),92.2,Actual
+2021-12-12,Adelaide Hills (DC),93.9,Actual
 2021-08-27,Adelaide Plains (DC),22.9,Actual
 2021-09-05,Adelaide Plains (DC),26.3,Actual
 2021-09-12,Adelaide Plains (DC),29.1,Actual
@@ -50,16 +56,19 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-10,Adelaide Plains (DC),40.4,Actual
 2021-10-17,Adelaide Plains (DC),45.1,Actual
 2021-10-24,Adelaide Plains (DC),48.7,Actual
-2021-10-26,Adelaide Plains (DC),50,Predicted
+2021-10-25,Adelaide Plains (DC),50,Predicted
 2021-10-31,Adelaide Plains (DC),52,Actual
 2021-11-07,Adelaide Plains (DC),55.6,Actual
 2021-11-14,Adelaide Plains (DC),59.9,Actual
-2021-11-16,Adelaide Plains (DC),60,Predicted
+2021-11-14,Adelaide Plains (DC),60,Predicted
 2021-11-21,Adelaide Plains (DC),64.3,Actual
-2021-12-06,Adelaide Plains (DC),70,Predicted
-2021-12-27,Adelaide Plains (DC),80,Predicted
-2022-01-17,Adelaide Plains (DC),90,Predicted
-2021-08-09,Alexandrina (DC),30,Predicted
+2021-11-28,Adelaide Plains (DC),68.5,Actual
+2021-12-04,Adelaide Plains (DC),70,Predicted
+2021-12-05,Adelaide Plains (DC),71.9,Actual
+2021-12-12,Adelaide Plains (DC),74.9,Actual
+2021-12-23,Adelaide Plains (DC),80,Predicted
+2022-01-12,Adelaide Plains (DC),90,Predicted
+2021-08-08,Alexandrina (DC),30,Predicted
 2021-08-27,Alexandrina (DC),37.8,Actual
 2021-08-30,Alexandrina (DC),40,Predicted
 2021-09-05,Alexandrina (DC),42.9,Actual
@@ -77,131 +86,152 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-11-07,Alexandrina (DC),71.6,Actual
 2021-11-14,Alexandrina (DC),75.2,Actual
 2021-11-21,Alexandrina (DC),78.1,Actual
-2021-11-25,Alexandrina (DC),80,Predicted
-2021-12-17,Alexandrina (DC),90,Predicted
-2021-08-06,Barossa (DC),30,Predicted
-2021-08-26,Barossa (DC),40,Predicted
+2021-11-27,Alexandrina (DC),80,Predicted
+2021-11-28,Alexandrina (DC),81.1,Actual
+2021-12-05,Alexandrina (DC),83.3,Actual
+2021-12-12,Alexandrina (DC),85.3,Actual
+2021-12-19,Alexandrina (DC),90,Predicted
+2021-08-03,Barossa (DC),30,Predicted
+2021-08-25,Barossa (DC),40,Predicted
 2021-08-27,Barossa (DC),39.3,Actual
 2021-09-05,Barossa (DC),44.8,Actual
 2021-09-12,Barossa (DC),48.9,Actual
-2021-09-16,Barossa (DC),50,Predicted
+2021-09-15,Barossa (DC),50,Predicted
 2021-09-19,Barossa (DC),52.2,Actual
 2021-09-26,Barossa (DC),55,Actual
 2021-10-03,Barossa (DC),58.5,Actual
-2021-10-06,Barossa (DC),60,Predicted
+2021-10-07,Barossa (DC),60,Predicted
 2021-10-10,Barossa (DC),61.8,Actual
 2021-10-17,Barossa (DC),65.2,Actual
 2021-10-24,Barossa (DC),69,Actual
-2021-10-27,Barossa (DC),70,Predicted
+2021-10-28,Barossa (DC),70,Predicted
 2021-10-31,Barossa (DC),72.6,Actual
 2021-11-07,Barossa (DC),75.6,Actual
 2021-11-14,Barossa (DC),78.6,Actual
-2021-11-16,Barossa (DC),80,Predicted
+2021-11-18,Barossa (DC),80,Predicted
 2021-11-21,Barossa (DC),81.5,Actual
-2021-12-07,Barossa (DC),90,Predicted
-2021-07-25,Barunga West (DC),30,Predicted
-2021-08-18,Barunga West (DC),40,Predicted
+2021-11-28,Barossa (DC),84.5,Actual
+2021-12-05,Barossa (DC),86.7,Actual
+2021-12-10,Barossa (DC),90,Predicted
+2021-12-12,Barossa (DC),88.8,Actual
+2021-07-20,Barunga West (DC),30,Predicted
+2021-08-15,Barunga West (DC),40,Predicted
 2021-08-27,Barunga West (DC),40.2,Actual
 2021-09-05,Barunga West (DC),45.8,Actual
-2021-09-11,Barunga West (DC),50,Predicted
+2021-09-10,Barunga West (DC),50,Predicted
 2021-09-12,Barunga West (DC),52.4,Actual
 2021-09-19,Barunga West (DC),55.2,Actual
 2021-09-26,Barunga West (DC),57.9,Actual
 2021-10-03,Barunga West (DC),60.7,Actual
-2021-10-06,Barunga West (DC),60,Predicted
+2021-10-07,Barunga West (DC),60,Predicted
 2021-10-10,Barunga West (DC),62.9,Actual
 2021-10-17,Barunga West (DC),65.4,Actual
 2021-10-24,Barunga West (DC),67.5,Actual
-2021-10-30,Barunga West (DC),70,Predicted
 2021-10-31,Barunga West (DC),69.7,Actual
+2021-11-02,Barunga West (DC),70,Predicted
 2021-11-07,Barunga West (DC),72,Actual
 2021-11-14,Barunga West (DC),74.3,Actual
 2021-11-21,Barunga West (DC),77.5,Actual
-2021-11-24,Barunga West (DC),80,Predicted
-2021-12-18,Barunga West (DC),90,Predicted
+2021-11-28,Barunga West (DC),79,Actual
+2021-11-28,Barunga West (DC),80,Predicted
+2021-12-05,Barunga West (DC),81.3,Actual
+2021-12-12,Barunga West (DC),82.6,Actual
+2021-12-24,Barunga West (DC),90,Predicted
 2021-08-27,Berri and Barmera (DC),32.6,Actual
 2021-08-28,Berri and Barmera (DC),30,Predicted
 2021-09-05,Berri and Barmera (DC),35.9,Actual
 2021-09-12,Berri and Barmera (DC),39.4,Actual
-2021-09-15,Berri and Barmera (DC),40,Predicted
+2021-09-16,Berri and Barmera (DC),40,Predicted
 2021-09-19,Berri and Barmera (DC),41.9,Actual
 2021-09-26,Berri and Barmera (DC),44.7,Actual
 2021-10-03,Berri and Barmera (DC),46.7,Actual
 2021-10-04,Berri and Barmera (DC),50,Predicted
 2021-10-10,Berri and Barmera (DC),50.6,Actual
 2021-10-17,Berri and Barmera (DC),55.9,Actual
-2021-10-23,Berri and Barmera (DC),60,Predicted
+2021-10-22,Berri and Barmera (DC),60,Predicted
 2021-10-24,Berri and Barmera (DC),59.6,Actual
 2021-10-31,Berri and Barmera (DC),63.8,Actual
 2021-11-07,Berri and Barmera (DC),68.4,Actual
-2021-11-10,Berri and Barmera (DC),70,Predicted
+2021-11-09,Berri and Barmera (DC),70,Predicted
 2021-11-14,Berri and Barmera (DC),73.2,Actual
 2021-11-21,Berri and Barmera (DC),78.2,Actual
-2021-11-29,Berri and Barmera (DC),80,Predicted
-2021-12-18,Berri and Barmera (DC),90,Predicted
-2021-07-25,Burnside (C),30,Predicted
-2021-08-13,Burnside (C),40,Predicted
+2021-11-28,Berri and Barmera (DC),82.4,Actual
+2021-11-28,Berri and Barmera (DC),80,Predicted
+2021-12-05,Berri and Barmera (DC),84.7,Actual
+2021-12-12,Berri and Barmera (DC),87.1,Actual
+2021-12-16,Berri and Barmera (DC),90,Predicted
+2021-07-19,Burnside (C),30,Predicted
+2021-08-09,Burnside (C),40,Predicted
 2021-08-27,Burnside (C),46.8,Actual
-2021-09-01,Burnside (C),50,Predicted
+2021-08-29,Burnside (C),50,Predicted
 2021-09-05,Burnside (C),51.5,Actual
 2021-09-12,Burnside (C),55.3,Actual
 2021-09-19,Burnside (C),59.5,Actual
 2021-09-19,Burnside (C),60,Predicted
 2021-09-26,Burnside (C),63.9,Actual
 2021-10-03,Burnside (C),68.4,Actual
-2021-10-08,Burnside (C),70,Predicted
 2021-10-10,Burnside (C),72.3,Actual
+2021-10-10,Burnside (C),70,Predicted
 2021-10-17,Burnside (C),75.8,Actual
 2021-10-24,Burnside (C),79.2,Actual
-2021-10-27,Burnside (C),80,Predicted
+2021-10-30,Burnside (C),80,Predicted
 2021-10-31,Burnside (C),82.7,Actual
 2021-11-07,Burnside (C),86.2,Actual
 2021-11-14,Burnside (C),88.6,Actual
-2021-11-15,Burnside (C),90,Predicted
+2021-11-20,Burnside (C),90,Predicted
 2021-11-21,Burnside (C),90.8,Actual
-2021-08-25,Campbelltown (C) (SA),30,Predicted
+2021-11-28,Burnside (C),92.7,Actual
+2021-12-05,Burnside (C),94.1,Actual
+2021-12-12,Burnside (C),95,Actual
+2021-08-23,Campbelltown (C) (SA),30,Predicted
 2021-08-27,Campbelltown (C) (SA),33.2,Actual
 2021-09-05,Campbelltown (C) (SA),37.3,Actual
-2021-09-11,Campbelltown (C) (SA),40,Predicted
+2021-09-10,Campbelltown (C) (SA),40,Predicted
 2021-09-12,Campbelltown (C) (SA),40.4,Actual
 2021-09-19,Campbelltown (C) (SA),44.2,Actual
 2021-09-26,Campbelltown (C) (SA),48.1,Actual
 2021-09-28,Campbelltown (C) (SA),50,Predicted
 2021-10-03,Campbelltown (C) (SA),52.2,Actual
 2021-10-10,Campbelltown (C) (SA),55.9,Actual
-2021-10-15,Campbelltown (C) (SA),60,Predicted
+2021-10-16,Campbelltown (C) (SA),60,Predicted
 2021-10-17,Campbelltown (C) (SA),59.9,Actual
 2021-10-24,Campbelltown (C) (SA),64.8,Actual
 2021-10-31,Campbelltown (C) (SA),69.6,Actual
-2021-11-01,Campbelltown (C) (SA),70,Predicted
+2021-11-03,Campbelltown (C) (SA),70,Predicted
 2021-11-07,Campbelltown (C) (SA),74.3,Actual
 2021-11-14,Campbelltown (C) (SA),77.9,Actual
-2021-11-19,Campbelltown (C) (SA),80,Predicted
 2021-11-21,Campbelltown (C) (SA),81.4,Actual
-2021-12-06,Campbelltown (C) (SA),90,Predicted
+2021-11-21,Campbelltown (C) (SA),80,Predicted
+2021-11-28,Campbelltown (C) (SA),84.3,Actual
+2021-12-05,Campbelltown (C) (SA),86.8,Actual
+2021-12-09,Campbelltown (C) (SA),90,Predicted
+2021-12-12,Campbelltown (C) (SA),88.7,Actual
 2021-08-27,Charles Sturt (C),28.4,Actual
-2021-09-02,Charles Sturt (C),30,Predicted
+2021-09-01,Charles Sturt (C),30,Predicted
 2021-09-05,Charles Sturt (C),32.2,Actual
 2021-09-12,Charles Sturt (C),35.3,Actual
 2021-09-19,Charles Sturt (C),39.1,Actual
-2021-09-20,Charles Sturt (C),40,Predicted
+2021-09-19,Charles Sturt (C),40,Predicted
 2021-09-26,Charles Sturt (C),43.1,Actual
 2021-10-03,Charles Sturt (C),47.3,Actual
-2021-10-07,Charles Sturt (C),50,Predicted
+2021-10-08,Charles Sturt (C),50,Predicted
 2021-10-10,Charles Sturt (C),51,Actual
 2021-10-17,Charles Sturt (C),54.8,Actual
 2021-10-24,Charles Sturt (C),59,Actual
-2021-10-25,Charles Sturt (C),60,Predicted
+2021-10-26,Charles Sturt (C),60,Predicted
 2021-10-31,Charles Sturt (C),63.4,Actual
 2021-11-07,Charles Sturt (C),68,Actual
-2021-11-12,Charles Sturt (C),70,Predicted
+2021-11-13,Charles Sturt (C),70,Predicted
 2021-11-14,Charles Sturt (C),71.7,Actual
 2021-11-21,Charles Sturt (C),75.4,Actual
-2021-11-30,Charles Sturt (C),80,Predicted
-2021-12-17,Charles Sturt (C),90,Predicted
-2021-08-15,Clare and Gilbert Valleys (DC),30,Predicted
+2021-11-28,Charles Sturt (C),78.5,Actual
+2021-12-02,Charles Sturt (C),80,Predicted
+2021-12-05,Charles Sturt (C),81,Actual
+2021-12-12,Charles Sturt (C),83.1,Actual
+2021-12-20,Charles Sturt (C),90,Predicted
+2021-08-12,Clare and Gilbert Valleys (DC),30,Predicted
 2021-08-27,Clare and Gilbert Valleys (DC),35.1,Actual
-2021-09-03,Clare and Gilbert Valleys (DC),40,Predicted
+2021-09-01,Clare and Gilbert Valleys (DC),40,Predicted
 2021-09-05,Clare and Gilbert Valleys (DC),40.1,Actual
 2021-09-12,Clare and Gilbert Valleys (DC),44.7,Actual
 2021-09-19,Clare and Gilbert Valleys (DC),49,Actual
@@ -209,16 +239,19 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-09-26,Clare and Gilbert Valleys (DC),53.4,Actual
 2021-10-03,Clare and Gilbert Valleys (DC),57,Actual
 2021-10-10,Clare and Gilbert Valleys (DC),60.3,Actual
-2021-10-11,Clare and Gilbert Valleys (DC),60,Predicted
+2021-10-12,Clare and Gilbert Valleys (DC),60,Predicted
 2021-10-17,Clare and Gilbert Valleys (DC),63.9,Actual
 2021-10-24,Clare and Gilbert Valleys (DC),67.7,Actual
-2021-10-30,Clare and Gilbert Valleys (DC),70,Predicted
 2021-10-31,Clare and Gilbert Valleys (DC),71,Actual
+2021-11-01,Clare and Gilbert Valleys (DC),70,Predicted
 2021-11-07,Clare and Gilbert Valleys (DC),74.3,Actual
 2021-11-14,Clare and Gilbert Valleys (DC),77.2,Actual
-2021-11-18,Clare and Gilbert Valleys (DC),80,Predicted
 2021-11-21,Clare and Gilbert Valleys (DC),79.8,Actual
-2021-12-07,Clare and Gilbert Valleys (DC),90,Predicted
+2021-11-21,Clare and Gilbert Valleys (DC),80,Predicted
+2021-11-28,Clare and Gilbert Valleys (DC),82.6,Actual
+2021-12-05,Clare and Gilbert Valleys (DC),84.7,Actual
+2021-12-12,Clare and Gilbert Valleys (DC),86.4,Actual
+2021-12-12,Clare and Gilbert Valleys (DC),90,Predicted
 2021-08-16,Copper Coast (DC),30,Predicted
 2021-08-27,Copper Coast (DC),35.2,Actual
 2021-09-05,Copper Coast (DC),40,Actual
@@ -233,15 +266,18 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-17,Copper Coast (DC),60,Predicted
 2021-10-24,Copper Coast (DC),63.3,Actual
 2021-10-31,Copper Coast (DC),66.7,Actual
-2021-11-06,Copper Coast (DC),70,Predicted
 2021-11-07,Copper Coast (DC),70.2,Actual
+2021-11-07,Copper Coast (DC),70,Predicted
 2021-11-14,Copper Coast (DC),73.8,Actual
 2021-11-21,Copper Coast (DC),77.9,Actual
 2021-11-27,Copper Coast (DC),80,Predicted
+2021-11-28,Copper Coast (DC),80.8,Actual
+2021-12-05,Copper Coast (DC),83.9,Actual
+2021-12-12,Copper Coast (DC),86.1,Actual
 2021-12-18,Copper Coast (DC),90,Predicted
-2021-08-04,Flinders Ranges (DC),30,Predicted
+2021-08-01,Flinders Ranges (DC),30,Predicted
+2021-08-25,Flinders Ranges (DC),40,Predicted
 2021-08-27,Flinders Ranges (DC),37.3,Actual
-2021-08-27,Flinders Ranges (DC),40,Predicted
 2021-09-05,Flinders Ranges (DC),44.8,Actual
 2021-09-12,Flinders Ranges (DC),47.3,Actual
 2021-09-19,Flinders Ranges (DC),48.8,Actual
@@ -249,17 +285,20 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-09-26,Flinders Ranges (DC),56,Actual
 2021-10-03,Flinders Ranges (DC),57.4,Actual
 2021-10-10,Flinders Ranges (DC),59.3,Actual
-2021-10-12,Flinders Ranges (DC),60,Predicted
+2021-10-13,Flinders Ranges (DC),60,Predicted
 2021-10-17,Flinders Ranges (DC),62.8,Actual
 2021-10-24,Flinders Ranges (DC),65,Actual
 2021-10-31,Flinders Ranges (DC),68.2,Actual
-2021-11-04,Flinders Ranges (DC),70,Predicted
+2021-11-06,Flinders Ranges (DC),70,Predicted
 2021-11-07,Flinders Ranges (DC),71.5,Actual
 2021-11-14,Flinders Ranges (DC),73.7,Actual
 2021-11-21,Flinders Ranges (DC),75.8,Actual
-2021-11-27,Flinders Ranges (DC),80,Predicted
-2021-12-20,Flinders Ranges (DC),90,Predicted
-2021-08-19,Gawler (T),30,Predicted
+2021-11-28,Flinders Ranges (DC),79.2,Actual
+2021-11-30,Flinders Ranges (DC),80,Predicted
+2021-12-05,Flinders Ranges (DC),80.4,Actual
+2021-12-12,Flinders Ranges (DC),81.8,Actual
+2021-12-25,Flinders Ranges (DC),90,Predicted
+2021-08-20,Gawler (T),30,Predicted
 2021-08-27,Gawler (T),34.2,Actual
 2021-09-05,Gawler (T),40,Actual
 2021-09-07,Gawler (T),40,Predicted
@@ -273,15 +312,18 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-17,Gawler (T),61.4,Actual
 2021-10-24,Gawler (T),65.7,Actual
 2021-10-31,Gawler (T),69.6,Actual
-2021-11-01,Gawler (T),70,Predicted
+2021-10-31,Gawler (T),70,Predicted
 2021-11-07,Gawler (T),73.6,Actual
 2021-11-14,Gawler (T),77.7,Actual
-2021-11-19,Gawler (T),80,Predicted
+2021-11-18,Gawler (T),80,Predicted
 2021-11-21,Gawler (T),82.1,Actual
-2021-12-07,Gawler (T),90,Predicted
+2021-11-28,Gawler (T),86.4,Actual
+2021-12-05,Gawler (T),90.1,Actual
+2021-12-06,Gawler (T),90,Predicted
+2021-12-12,Gawler (T),93.1,Actual
 2021-08-27,Goyder (DC),25.9,Actual
+2021-09-04,Goyder (DC),30,Predicted
 2021-09-05,Goyder (DC),30.1,Actual
-2021-09-05,Goyder (DC),30,Predicted
 2021-09-12,Goyder (DC),33.5,Actual
 2021-09-19,Goyder (DC),37.4,Actual
 2021-09-26,Goyder (DC),40.2,Actual
@@ -296,9 +338,12 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-11-07,Goyder (DC),60,Predicted
 2021-11-14,Goyder (DC),63.9,Actual
 2021-11-21,Goyder (DC),66.9,Actual
-2021-11-28,Goyder (DC),70,Predicted
-2021-12-19,Goyder (DC),80,Predicted
-2022-01-09,Goyder (DC),90,Predicted
+2021-11-28,Goyder (DC),69.9,Actual
+2021-11-29,Goyder (DC),70,Predicted
+2021-12-05,Goyder (DC),72.4,Actual
+2021-12-12,Goyder (DC),75.2,Actual
+2021-12-20,Goyder (DC),80,Predicted
+2022-01-10,Goyder (DC),90,Predicted
 2021-08-27,Grant (DC),5.7,Actual
 2021-09-05,Grant (DC),6.7,Actual
 2021-09-12,Grant (DC),7.6,Actual
@@ -312,28 +357,31 @@ date_as_at,abs_name,air_second_dose_pct,type
 2022-09-18,Grant (DC),70,Predicted
 2022-11-17,Grant (DC),80,Predicted
 2023-01-16,Grant (DC),90,Predicted
-2021-08-01,Holdfast Bay (C),30,Predicted
-2021-08-20,Holdfast Bay (C),40,Predicted
+2021-07-27,Holdfast Bay (C),30,Predicted
+2021-08-16,Holdfast Bay (C),40,Predicted
 2021-08-27,Holdfast Bay (C),42.8,Actual
 2021-09-05,Holdfast Bay (C),48.2,Actual
-2021-09-08,Holdfast Bay (C),50,Predicted
+2021-09-06,Holdfast Bay (C),50,Predicted
 2021-09-12,Holdfast Bay (C),52,Actual
 2021-09-19,Holdfast Bay (C),55.9,Actual
 2021-09-26,Holdfast Bay (C),60,Actual
 2021-09-27,Holdfast Bay (C),60,Predicted
 2021-10-03,Holdfast Bay (C),64.2,Actual
 2021-10-10,Holdfast Bay (C),67.6,Actual
-2021-10-16,Holdfast Bay (C),70,Predicted
 2021-10-17,Holdfast Bay (C),71.1,Actual
+2021-10-18,Holdfast Bay (C),70,Predicted
 2021-10-24,Holdfast Bay (C),74.6,Actual
 2021-10-31,Holdfast Bay (C),78.4,Actual
-2021-11-04,Holdfast Bay (C),80,Predicted
 2021-11-07,Holdfast Bay (C),81.9,Actual
+2021-11-08,Holdfast Bay (C),80,Predicted
 2021-11-14,Holdfast Bay (C),84.7,Actual
 2021-11-21,Holdfast Bay (C),86.9,Actual
-2021-11-23,Holdfast Bay (C),90,Predicted
+2021-11-28,Holdfast Bay (C),88.9,Actual
+2021-11-28,Holdfast Bay (C),90,Predicted
+2021-12-05,Holdfast Bay (C),90.4,Actual
+2021-12-12,Holdfast Bay (C),91.7,Actual
 2021-08-27,Karoonda East Murray (DC),29.9,Actual
-2021-08-31,Karoonda East Murray (DC),30,Predicted
+2021-09-02,Karoonda East Murray (DC),30,Predicted
 2021-09-05,Karoonda East Murray (DC),32.2,Actual
 2021-09-12,Karoonda East Murray (DC),35.7,Actual
 2021-09-19,Karoonda East Murray (DC),37.7,Actual
@@ -342,18 +390,21 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-03,Karoonda East Murray (DC),42.6,Actual
 2021-10-10,Karoonda East Murray (DC),44.6,Actual
 2021-10-17,Karoonda East Murray (DC),48.1,Actual
-2021-10-19,Karoonda East Murray (DC),50,Predicted
+2021-10-18,Karoonda East Murray (DC),50,Predicted
 2021-10-24,Karoonda East Murray (DC),50.7,Actual
 2021-10-31,Karoonda East Murray (DC),54,Actual
 2021-11-07,Karoonda East Murray (DC),57.7,Actual
-2021-11-12,Karoonda East Murray (DC),60,Predicted
+2021-11-10,Karoonda East Murray (DC),60,Predicted
 2021-11-14,Karoonda East Murray (DC),62,Actual
 2021-11-21,Karoonda East Murray (DC),65,Actual
-2021-12-07,Karoonda East Murray (DC),70,Predicted
-2021-12-31,Karoonda East Murray (DC),80,Predicted
-2022-01-25,Karoonda East Murray (DC),90,Predicted
-2021-07-28,Kingston (DC) (SA),30,Predicted
-2021-08-19,Kingston (DC) (SA),40,Predicted
+2021-11-28,Karoonda East Murray (DC),68.4,Actual
+2021-12-03,Karoonda East Murray (DC),70,Predicted
+2021-12-05,Karoonda East Murray (DC),73,Actual
+2021-12-12,Karoonda East Murray (DC),74.9,Actual
+2021-12-26,Karoonda East Murray (DC),80,Predicted
+2022-01-18,Karoonda East Murray (DC),90,Predicted
+2021-07-26,Kingston (DC) (SA),30,Predicted
+2021-08-18,Kingston (DC) (SA),40,Predicted
 2021-08-27,Kingston (DC) (SA),43.9,Actual
 2021-09-05,Kingston (DC) (SA),47.7,Actual
 2021-09-10,Kingston (DC) (SA),50,Predicted
@@ -365,15 +416,18 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-10,Kingston (DC) (SA),62.7,Actual
 2021-10-17,Kingston (DC) (SA),65.8,Actual
 2021-10-24,Kingston (DC) (SA),70.3,Actual
-2021-10-24,Kingston (DC) (SA),70,Predicted
+2021-10-25,Kingston (DC) (SA),70,Predicted
 2021-10-31,Kingston (DC) (SA),73.7,Actual
 2021-11-07,Kingston (DC) (SA),76.8,Actual
 2021-11-14,Kingston (DC) (SA),79.2,Actual
-2021-11-15,Kingston (DC) (SA),80,Predicted
+2021-11-16,Kingston (DC) (SA),80,Predicted
 2021-11-21,Kingston (DC) (SA),82.4,Actual
-2021-12-08,Kingston (DC) (SA),90,Predicted
+2021-11-28,Kingston (DC) (SA),86.1,Actual
+2021-12-05,Kingston (DC) (SA),87,Actual
+2021-12-09,Kingston (DC) (SA),90,Predicted
+2021-12-12,Kingston (DC) (SA),90.1,Actual
 2021-08-27,Light (RegC),27.5,Actual
-2021-09-02,Light (RegC),30,Predicted
+2021-09-01,Light (RegC),30,Predicted
 2021-09-05,Light (RegC),32,Actual
 2021-09-12,Light (RegC),35.2,Actual
 2021-09-19,Light (RegC),37.7,Actual
@@ -386,14 +440,17 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-24,Light (RegC),52.7,Actual
 2021-10-31,Light (RegC),56.2,Actual
 2021-11-07,Light (RegC),59.1,Actual
-2021-11-10,Light (RegC),60,Predicted
+2021-11-11,Light (RegC),60,Predicted
 2021-11-14,Light (RegC),61.7,Actual
 2021-11-21,Light (RegC),64.4,Actual
-2021-12-04,Light (RegC),70,Predicted
-2021-12-27,Light (RegC),80,Predicted
-2022-01-19,Light (RegC),90,Predicted
+2021-11-28,Light (RegC),67.3,Actual
+2021-12-05,Light (RegC),70.1,Actual
+2021-12-05,Light (RegC),70,Predicted
+2021-12-12,Light (RegC),72.1,Actual
+2021-12-28,Light (RegC),80,Predicted
+2022-01-21,Light (RegC),90,Predicted
 2021-08-27,Loxton Waikerie (DC),30.1,Actual
-2021-09-01,Loxton Waikerie (DC),30,Predicted
+2021-09-02,Loxton Waikerie (DC),30,Predicted
 2021-09-05,Loxton Waikerie (DC),33.8,Actual
 2021-09-12,Loxton Waikerie (DC),36.6,Actual
 2021-09-19,Loxton Waikerie (DC),39.2,Actual
@@ -404,37 +461,43 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-10,Loxton Waikerie (DC),48.5,Actual
 2021-10-17,Loxton Waikerie (DC),52.6,Actual
 2021-10-24,Loxton Waikerie (DC),57.4,Actual
-2021-10-27,Loxton Waikerie (DC),60,Predicted
+2021-10-26,Loxton Waikerie (DC),60,Predicted
 2021-10-31,Loxton Waikerie (DC),61.7,Actual
 2021-11-07,Loxton Waikerie (DC),66.5,Actual
+2021-11-13,Loxton Waikerie (DC),70,Predicted
 2021-11-14,Loxton Waikerie (DC),71,Actual
-2021-11-14,Loxton Waikerie (DC),70,Predicted
 2021-11-21,Loxton Waikerie (DC),75.8,Actual
-2021-12-03,Loxton Waikerie (DC),80,Predicted
-2021-12-21,Loxton Waikerie (DC),90,Predicted
-2021-08-18,Marion (C),30,Predicted
+2021-11-28,Loxton Waikerie (DC),79.8,Actual
+2021-12-02,Loxton Waikerie (DC),80,Predicted
+2021-12-05,Loxton Waikerie (DC),82.8,Actual
+2021-12-12,Loxton Waikerie (DC),84.8,Actual
+2021-12-20,Loxton Waikerie (DC),90,Predicted
+2021-08-15,Marion (C),30,Predicted
 2021-08-27,Marion (C),35.9,Actual
+2021-09-04,Marion (C),40,Predicted
 2021-09-05,Marion (C),40.4,Actual
-2021-09-05,Marion (C),40,Predicted
 2021-09-12,Marion (C),43.6,Actual
 2021-09-19,Marion (C),47.2,Actual
 2021-09-23,Marion (C),50,Predicted
 2021-09-26,Marion (C),51,Actual
 2021-10-03,Marion (C),55.3,Actual
 2021-10-10,Marion (C),59.1,Actual
-2021-10-11,Marion (C),60,Predicted
+2021-10-12,Marion (C),60,Predicted
 2021-10-17,Marion (C),62.9,Actual
 2021-10-24,Marion (C),66.7,Actual
-2021-10-30,Marion (C),70,Predicted
 2021-10-31,Marion (C),71,Actual
+2021-11-01,Marion (C),70,Predicted
 2021-11-07,Marion (C),75.3,Actual
 2021-11-14,Marion (C),78.9,Actual
-2021-11-17,Marion (C),80,Predicted
+2021-11-20,Marion (C),80,Predicted
 2021-11-21,Marion (C),81.8,Actual
-2021-12-05,Marion (C),90,Predicted
+2021-11-28,Marion (C),84.3,Actual
+2021-12-05,Marion (C),86.2,Actual
+2021-12-09,Marion (C),90,Predicted
+2021-12-12,Marion (C),87.8,Actual
 2021-08-27,Mid Murray (DC),24.4,Actual
 2021-09-05,Mid Murray (DC),28.9,Actual
-2021-09-09,Mid Murray (DC),30,Predicted
+2021-09-08,Mid Murray (DC),30,Predicted
 2021-09-12,Mid Murray (DC),31.4,Actual
 2021-09-19,Mid Murray (DC),34.5,Actual
 2021-09-26,Mid Murray (DC),38.6,Actual
@@ -449,49 +512,58 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-11-14,Mid Murray (DC),60.5,Actual
 2021-11-14,Mid Murray (DC),60,Predicted
 2021-11-21,Mid Murray (DC),63.5,Actual
+2021-11-28,Mid Murray (DC),66.8,Actual
+2021-12-05,Mid Murray (DC),69.4,Actual
 2021-12-06,Mid Murray (DC),70,Predicted
-2021-12-28,Mid Murray (DC),80,Predicted
+2021-12-12,Mid Murray (DC),71.9,Actual
+2021-12-29,Mid Murray (DC),80,Predicted
 2022-01-20,Mid Murray (DC),90,Predicted
-2021-08-02,Mitcham (C),30,Predicted
-2021-08-20,Mitcham (C),40,Predicted
+2021-07-28,Mitcham (C),30,Predicted
+2021-08-17,Mitcham (C),40,Predicted
 2021-08-27,Mitcham (C),43,Actual
 2021-09-05,Mitcham (C),47.8,Actual
-2021-09-08,Mitcham (C),50,Predicted
+2021-09-06,Mitcham (C),50,Predicted
 2021-09-12,Mitcham (C),51.3,Actual
 2021-09-19,Mitcham (C),56,Actual
 2021-09-26,Mitcham (C),60.3,Actual
 2021-09-27,Mitcham (C),60,Predicted
 2021-10-03,Mitcham (C),64.6,Actual
 2021-10-10,Mitcham (C),68.1,Actual
-2021-10-15,Mitcham (C),70,Predicted
 2021-10-17,Mitcham (C),71.9,Actual
+2021-10-17,Mitcham (C),70,Predicted
 2021-10-24,Mitcham (C),75.1,Actual
 2021-10-31,Mitcham (C),79.2,Actual
-2021-11-03,Mitcham (C),80,Predicted
+2021-11-06,Mitcham (C),80,Predicted
 2021-11-07,Mitcham (C),82.8,Actual
 2021-11-14,Mitcham (C),85.5,Actual
 2021-11-21,Mitcham (C),87.8,Actual
-2021-11-21,Mitcham (C),90,Predicted
-2021-08-20,Mount Barker (DC),30,Predicted
+2021-11-27,Mitcham (C),90,Predicted
+2021-11-28,Mitcham (C),89.8,Actual
+2021-12-05,Mitcham (C),91.2,Actual
+2021-12-12,Mitcham (C),92.3,Actual
+2021-08-19,Mount Barker (DC),30,Predicted
 2021-08-27,Mount Barker (DC),35,Actual
 2021-09-05,Mount Barker (DC),39.6,Actual
-2021-09-07,Mount Barker (DC),40,Predicted
+2021-09-06,Mount Barker (DC),40,Predicted
 2021-09-12,Mount Barker (DC),43.3,Actual
 2021-09-19,Mount Barker (DC),46.9,Actual
 2021-09-24,Mount Barker (DC),50,Predicted
 2021-09-26,Mount Barker (DC),50.6,Actual
 2021-10-03,Mount Barker (DC),54,Actual
 2021-10-10,Mount Barker (DC),57.5,Actual
-2021-10-12,Mount Barker (DC),60,Predicted
+2021-10-13,Mount Barker (DC),60,Predicted
 2021-10-17,Mount Barker (DC),61.9,Actual
 2021-10-24,Mount Barker (DC),66.7,Actual
-2021-10-30,Mount Barker (DC),70,Predicted
 2021-10-31,Mount Barker (DC),71.2,Actual
+2021-10-31,Mount Barker (DC),70,Predicted
 2021-11-07,Mount Barker (DC),75.1,Actual
 2021-11-14,Mount Barker (DC),78.7,Actual
-2021-11-17,Mount Barker (DC),80,Predicted
+2021-11-18,Mount Barker (DC),80,Predicted
 2021-11-21,Mount Barker (DC),82.3,Actual
-2021-12-05,Mount Barker (DC),90,Predicted
+2021-11-28,Mount Barker (DC),85.7,Actual
+2021-12-05,Mount Barker (DC),88.5,Actual
+2021-12-07,Mount Barker (DC),90,Predicted
+2021-12-12,Mount Barker (DC),90.7,Actual
 2021-08-27,Mount Gambier (C),29.6,Actual
 2021-09-02,Mount Gambier (C),30,Predicted
 2021-09-05,Mount Gambier (C),33.1,Actual
@@ -511,27 +583,40 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-11-09,Mount Gambier (C),80,Predicted
 2021-11-14,Mount Gambier (C),85.1,Actual
 2021-11-21,Mount Gambier (C),91.9,Actual
-2021-11-23,Mount Gambier (C),90,Predicted
+2021-11-22,Mount Gambier (C),90,Predicted
+2021-11-28,Mount Gambier (C),95,Actual
+2021-07-21,Mount Gambier (C) & Grant (DC),30,Predicted
+2021-08-16,Mount Gambier (C) & Grant (DC),40,Predicted
+2021-09-11,Mount Gambier (C) & Grant (DC),50,Predicted
+2021-10-07,Mount Gambier (C) & Grant (DC),60,Predicted
+2021-11-02,Mount Gambier (C) & Grant (DC),70,Predicted
+2021-11-28,Mount Gambier (C) & Grant (DC),80,Predicted
+2021-12-05,Mount Gambier (C) & Grant (DC),82.8,Actual
+2021-12-12,Mount Gambier (C) & Grant (DC),85.5,Actual
+2021-12-24,Mount Gambier (C) & Grant (DC),90,Predicted
+2021-08-25,Mount Remarkable (DC),30,Predicted
 2021-08-27,Mount Remarkable (DC),26.5,Actual
-2021-08-28,Mount Remarkable (DC),30,Predicted
 2021-09-05,Mount Remarkable (DC),31.8,Actual
 2021-09-12,Mount Remarkable (DC),36.8,Actual
-2021-09-17,Mount Remarkable (DC),40,Predicted
+2021-09-16,Mount Remarkable (DC),40,Predicted
 2021-09-19,Mount Remarkable (DC),42.7,Actual
 2021-09-26,Mount Remarkable (DC),48.3,Actual
 2021-10-03,Mount Remarkable (DC),50.4,Actual
-2021-10-06,Mount Remarkable (DC),50,Predicted
+2021-10-08,Mount Remarkable (DC),50,Predicted
 2021-10-10,Mount Remarkable (DC),53.8,Actual
 2021-10-17,Mount Remarkable (DC),57.2,Actual
 2021-10-24,Mount Remarkable (DC),60.6,Actual
-2021-10-26,Mount Remarkable (DC),60,Predicted
+2021-10-29,Mount Remarkable (DC),60,Predicted
 2021-10-31,Mount Remarkable (DC),63,Actual
 2021-11-07,Mount Remarkable (DC),65.2,Actual
 2021-11-14,Mount Remarkable (DC),66.8,Actual
-2021-11-14,Mount Remarkable (DC),70,Predicted
+2021-11-20,Mount Remarkable (DC),70,Predicted
 2021-11-21,Mount Remarkable (DC),69.7,Actual
-2021-12-04,Mount Remarkable (DC),80,Predicted
-2021-12-23,Mount Remarkable (DC),90,Predicted
+2021-11-28,Mount Remarkable (DC),72.2,Actual
+2021-12-05,Mount Remarkable (DC),73.1,Actual
+2021-12-12,Mount Remarkable (DC),74.6,Actual
+2021-12-12,Mount Remarkable (DC),80,Predicted
+2022-01-03,Mount Remarkable (DC),90,Predicted
 2021-08-27,Murray Bridge (RC),28.5,Actual
 2021-09-04,Murray Bridge (RC),30,Predicted
 2021-09-05,Murray Bridge (RC),30.9,Actual
@@ -549,13 +634,16 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-11-08,Murray Bridge (RC),60,Predicted
 2021-11-14,Murray Bridge (RC),63.5,Actual
 2021-11-21,Murray Bridge (RC),66.4,Actual
-2021-11-29,Murray Bridge (RC),70,Predicted
+2021-11-28,Murray Bridge (RC),69.8,Actual
+2021-11-30,Murray Bridge (RC),70,Predicted
+2021-12-05,Murray Bridge (RC),72.3,Actual
+2021-12-12,Murray Bridge (RC),75.1,Actual
 2021-12-21,Murray Bridge (RC),80,Predicted
-2022-01-11,Murray Bridge (RC),90,Predicted
-2021-08-19,Naracoorte and Lucindale (DC),30,Predicted
+2022-01-12,Murray Bridge (RC),90,Predicted
+2021-08-17,Naracoorte and Lucindale (DC),30,Predicted
 2021-08-27,Naracoorte and Lucindale (DC),35.8,Actual
+2021-09-04,Naracoorte and Lucindale (DC),40,Predicted
 2021-09-05,Naracoorte and Lucindale (DC),39.9,Actual
-2021-09-05,Naracoorte and Lucindale (DC),40,Predicted
 2021-09-12,Naracoorte and Lucindale (DC),44.4,Actual
 2021-09-19,Naracoorte and Lucindale (DC),47.6,Actual
 2021-09-22,Naracoorte and Lucindale (DC),50,Predicted
@@ -565,54 +653,63 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-10,Naracoorte and Lucindale (DC),60,Predicted
 2021-10-17,Naracoorte and Lucindale (DC),64.7,Actual
 2021-10-24,Naracoorte and Lucindale (DC),69.6,Actual
-2021-10-27,Naracoorte and Lucindale (DC),70,Predicted
+2021-10-28,Naracoorte and Lucindale (DC),70,Predicted
 2021-10-31,Naracoorte and Lucindale (DC),73.6,Actual
 2021-11-07,Naracoorte and Lucindale (DC),77,Actual
-2021-11-13,Naracoorte and Lucindale (DC),80,Predicted
 2021-11-14,Naracoorte and Lucindale (DC),80.1,Actual
+2021-11-15,Naracoorte and Lucindale (DC),80,Predicted
 2021-11-21,Naracoorte and Lucindale (DC),84.3,Actual
-2021-11-30,Naracoorte and Lucindale (DC),90,Predicted
-2021-08-24,Northern Areas (DC),30,Predicted
+2021-11-28,Naracoorte and Lucindale (DC),87.3,Actual
+2021-12-03,Naracoorte and Lucindale (DC),90,Predicted
+2021-12-05,Naracoorte and Lucindale (DC),89.5,Actual
+2021-12-12,Naracoorte and Lucindale (DC),91.3,Actual
+2021-08-21,Northern Areas (DC),30,Predicted
 2021-08-27,Northern Areas (DC),29.3,Actual
 2021-09-05,Northern Areas (DC),36.4,Actual
-2021-09-09,Northern Areas (DC),40,Predicted
+2021-09-07,Northern Areas (DC),40,Predicted
 2021-09-12,Northern Areas (DC),41.9,Actual
 2021-09-19,Northern Areas (DC),47.3,Actual
 2021-09-25,Northern Areas (DC),50,Predicted
 2021-09-26,Northern Areas (DC),53.2,Actual
 2021-10-03,Northern Areas (DC),56.5,Actual
 2021-10-10,Northern Areas (DC),60.2,Actual
-2021-10-11,Northern Areas (DC),60,Predicted
+2021-10-13,Northern Areas (DC),60,Predicted
 2021-10-17,Northern Areas (DC),64.4,Actual
 2021-10-24,Northern Areas (DC),68.7,Actual
-2021-10-27,Northern Areas (DC),70,Predicted
+2021-10-30,Northern Areas (DC),70,Predicted
 2021-10-31,Northern Areas (DC),72.8,Actual
 2021-11-07,Northern Areas (DC),76.4,Actual
-2021-11-12,Northern Areas (DC),80,Predicted
 2021-11-14,Northern Areas (DC),79.7,Actual
+2021-11-17,Northern Areas (DC),80,Predicted
 2021-11-21,Northern Areas (DC),82.4,Actual
-2021-11-29,Northern Areas (DC),90,Predicted
-2021-08-14,Norwood Payneham St Peters (C),30,Predicted
+2021-11-28,Northern Areas (DC),85.1,Actual
+2021-12-04,Northern Areas (DC),90,Predicted
+2021-12-05,Northern Areas (DC),87.6,Actual
+2021-12-12,Northern Areas (DC),88.8,Actual
+2021-08-10,Norwood Payneham St Peters (C),30,Predicted
 2021-08-27,Norwood Payneham St Peters (C),37.6,Actual
-2021-09-01,Norwood Payneham St Peters (C),40,Predicted
+2021-08-30,Norwood Payneham St Peters (C),40,Predicted
 2021-09-05,Norwood Payneham St Peters (C),42.1,Actual
 2021-09-12,Norwood Payneham St Peters (C),45.3,Actual
 2021-09-19,Norwood Payneham St Peters (C),49.4,Actual
 2021-09-19,Norwood Payneham St Peters (C),50,Predicted
 2021-09-26,Norwood Payneham St Peters (C),53.6,Actual
 2021-10-03,Norwood Payneham St Peters (C),58,Actual
-2021-10-08,Norwood Payneham St Peters (C),60,Predicted
+2021-10-09,Norwood Payneham St Peters (C),60,Predicted
 2021-10-10,Norwood Payneham St Peters (C),61.8,Actual
 2021-10-17,Norwood Payneham St Peters (C),65.4,Actual
 2021-10-24,Norwood Payneham St Peters (C),69.1,Actual
-2021-10-26,Norwood Payneham St Peters (C),70,Predicted
+2021-10-28,Norwood Payneham St Peters (C),70,Predicted
 2021-10-31,Norwood Payneham St Peters (C),73.2,Actual
 2021-11-07,Norwood Payneham St Peters (C),77.3,Actual
-2021-11-13,Norwood Payneham St Peters (C),80,Predicted
 2021-11-14,Norwood Payneham St Peters (C),80.3,Actual
+2021-11-17,Norwood Payneham St Peters (C),80,Predicted
 2021-11-21,Norwood Payneham St Peters (C),82.8,Actual
-2021-12-02,Norwood Payneham St Peters (C),90,Predicted
-2021-08-16,Onkaparinga (C),30,Predicted
+2021-11-28,Norwood Payneham St Peters (C),85,Actual
+2021-12-05,Norwood Payneham St Peters (C),86.8,Actual
+2021-12-07,Norwood Payneham St Peters (C),90,Predicted
+2021-12-12,Norwood Payneham St Peters (C),88.2,Actual
+2021-08-15,Onkaparinga (C),30,Predicted
 2021-08-27,Onkaparinga (C),35.5,Actual
 2021-09-05,Onkaparinga (C),40.5,Actual
 2021-09-05,Onkaparinga (C),40,Predicted
@@ -622,19 +719,22 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-09-26,Onkaparinga (C),50,Actual
 2021-10-03,Onkaparinga (C),53.3,Actual
 2021-10-10,Onkaparinga (C),56.8,Actual
-2021-10-15,Onkaparinga (C),60,Predicted
+2021-10-16,Onkaparinga (C),60,Predicted
 2021-10-17,Onkaparinga (C),60.4,Actual
 2021-10-24,Onkaparinga (C),63.8,Actual
 2021-10-31,Onkaparinga (C),67.7,Actual
-2021-11-04,Onkaparinga (C),70,Predicted
+2021-11-05,Onkaparinga (C),70,Predicted
 2021-11-07,Onkaparinga (C),72,Actual
 2021-11-14,Onkaparinga (C),75.6,Actual
 2021-11-21,Onkaparinga (C),78.8,Actual
-2021-11-24,Onkaparinga (C),80,Predicted
-2021-12-14,Onkaparinga (C),90,Predicted
-2021-08-11,Orroroo/Carrieton (DC),30,Predicted
+2021-11-26,Onkaparinga (C),80,Predicted
+2021-11-28,Onkaparinga (C),81.4,Actual
+2021-12-05,Onkaparinga (C),83.5,Actual
+2021-12-12,Onkaparinga (C),85.2,Actual
+2021-12-17,Onkaparinga (C),90,Predicted
+2021-08-08,Orroroo/Carrieton (DC),30,Predicted
 2021-08-27,Orroroo/Carrieton (DC),41.2,Actual
-2021-08-28,Orroroo/Carrieton (DC),40,Predicted
+2021-08-27,Orroroo/Carrieton (DC),40,Predicted
 2021-09-05,Orroroo/Carrieton (DC),45.5,Actual
 2021-09-12,Orroroo/Carrieton (DC),48.9,Actual
 2021-09-15,Orroroo/Carrieton (DC),50,Predicted
@@ -644,14 +744,17 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-03,Orroroo/Carrieton (DC),60,Predicted
 2021-10-10,Orroroo/Carrieton (DC),61.8,Actual
 2021-10-17,Orroroo/Carrieton (DC),68.1,Actual
-2021-10-21,Orroroo/Carrieton (DC),70,Predicted
+2021-10-22,Orroroo/Carrieton (DC),70,Predicted
 2021-10-24,Orroroo/Carrieton (DC),71.7,Actual
 2021-10-31,Orroroo/Carrieton (DC),76.5,Actual
 2021-11-07,Orroroo/Carrieton (DC),82,Actual
-2021-11-08,Orroroo/Carrieton (DC),80,Predicted
+2021-11-10,Orroroo/Carrieton (DC),80,Predicted
 2021-11-14,Orroroo/Carrieton (DC),83.7,Actual
 2021-11-21,Orroroo/Carrieton (DC),86.3,Actual
-2021-11-26,Orroroo/Carrieton (DC),90,Predicted
+2021-11-28,Orroroo/Carrieton (DC),89,Actual
+2021-11-29,Orroroo/Carrieton (DC),90,Predicted
+2021-12-05,Orroroo/Carrieton (DC),91.3,Actual
+2021-12-12,Orroroo/Carrieton (DC),93.4,Actual
 2021-08-27,Peterborough (DC),16.2,Actual
 2021-09-05,Peterborough (DC),21.4,Actual
 2021-09-12,Peterborough (DC),24,Actual
@@ -659,60 +762,69 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-09-22,Peterborough (DC),30,Predicted
 2021-09-26,Peterborough (DC),32.7,Actual
 2021-10-03,Peterborough (DC),34.6,Actual
-2021-10-09,Peterborough (DC),40,Predicted
 2021-10-10,Peterborough (DC),36.1,Actual
+2021-10-10,Peterborough (DC),40,Predicted
 2021-10-17,Peterborough (DC),42,Actual
 2021-10-24,Peterborough (DC),48.5,Actual
-2021-10-26,Peterborough (DC),50,Predicted
+2021-10-27,Peterborough (DC),50,Predicted
 2021-10-31,Peterborough (DC),53.1,Actual
 2021-11-07,Peterborough (DC),58,Actual
-2021-11-12,Peterborough (DC),60,Predicted
+2021-11-13,Peterborough (DC),60,Predicted
 2021-11-14,Peterborough (DC),61.8,Actual
 2021-11-21,Peterborough (DC),66,Actual
-2021-11-29,Peterborough (DC),70,Predicted
-2021-12-16,Peterborough (DC),80,Predicted
-2022-01-02,Peterborough (DC),90,Predicted
+2021-11-28,Peterborough (DC),68.2,Actual
+2021-11-30,Peterborough (DC),70,Predicted
+2021-12-05,Peterborough (DC),72,Actual
+2021-12-12,Peterborough (DC),76.4,Actual
+2021-12-18,Peterborough (DC),80,Predicted
+2022-01-04,Peterborough (DC),90,Predicted
 2021-08-27,Playford (C),22.1,Actual
 2021-09-05,Playford (C),25.9,Actual
 2021-09-12,Playford (C),28.5,Actual
-2021-09-17,Playford (C),30,Predicted
+2021-09-18,Playford (C),30,Predicted
 2021-09-19,Playford (C),31,Actual
 2021-09-26,Playford (C),33.6,Actual
 2021-10-03,Playford (C),36.5,Actual
-2021-10-07,Playford (C),40,Predicted
+2021-10-06,Playford (C),40,Predicted
 2021-10-10,Playford (C),39.6,Actual
 2021-10-17,Playford (C),43.2,Actual
 2021-10-24,Playford (C),47.2,Actual
-2021-10-26,Playford (C),50,Predicted
+2021-10-25,Playford (C),50,Predicted
 2021-10-31,Playford (C),51.3,Actual
 2021-11-07,Playford (C),56,Actual
+2021-11-12,Playford (C),60,Predicted
 2021-11-14,Playford (C),60.8,Actual
-2021-11-15,Playford (C),60,Predicted
 2021-11-21,Playford (C),65.4,Actual
-2021-12-05,Playford (C),70,Predicted
-2021-12-25,Playford (C),80,Predicted
-2022-01-14,Playford (C),90,Predicted
+2021-11-28,Playford (C),70.1,Actual
+2021-12-01,Playford (C),70,Predicted
+2021-12-05,Playford (C),73.9,Actual
+2021-12-12,Playford (C),77,Actual
+2021-12-20,Playford (C),80,Predicted
+2022-01-07,Playford (C),90,Predicted
 2021-08-27,Port Adelaide Enfield (C),27.5,Actual
-2021-09-04,Port Adelaide Enfield (C),30,Predicted
+2021-09-03,Port Adelaide Enfield (C),30,Predicted
 2021-09-05,Port Adelaide Enfield (C),31.4,Actual
 2021-09-12,Port Adelaide Enfield (C),34.6,Actual
 2021-09-19,Port Adelaide Enfield (C),38.5,Actual
-2021-09-21,Port Adelaide Enfield (C),40,Predicted
+2021-09-20,Port Adelaide Enfield (C),40,Predicted
 2021-09-26,Port Adelaide Enfield (C),42.4,Actual
 2021-10-03,Port Adelaide Enfield (C),46.5,Actual
 2021-10-08,Port Adelaide Enfield (C),50,Predicted
 2021-10-10,Port Adelaide Enfield (C),50.5,Actual
 2021-10-17,Port Adelaide Enfield (C),54.8,Actual
 2021-10-24,Port Adelaide Enfield (C),59.4,Actual
-2021-10-24,Port Adelaide Enfield (C),60,Predicted
+2021-10-25,Port Adelaide Enfield (C),60,Predicted
 2021-10-31,Port Adelaide Enfield (C),64.1,Actual
 2021-11-07,Port Adelaide Enfield (C),68.9,Actual
-2021-11-10,Port Adelaide Enfield (C),70,Predicted
+2021-11-12,Port Adelaide Enfield (C),70,Predicted
 2021-11-14,Port Adelaide Enfield (C),72.8,Actual
 2021-11-21,Port Adelaide Enfield (C),76.5,Actual
-2021-11-27,Port Adelaide Enfield (C),80,Predicted
-2021-12-14,Port Adelaide Enfield (C),90,Predicted
-2021-08-13,Port Augusta (C),30,Predicted
+2021-11-28,Port Adelaide Enfield (C),79.9,Actual
+2021-11-29,Port Adelaide Enfield (C),80,Predicted
+2021-12-05,Port Adelaide Enfield (C),82.6,Actual
+2021-12-12,Port Adelaide Enfield (C),84.8,Actual
+2021-12-17,Port Adelaide Enfield (C),90,Predicted
+2021-08-12,Port Augusta (C),30,Predicted
 2021-08-27,Port Augusta (C),35.8,Actual
 2021-09-05,Port Augusta (C),39.2,Actual
 2021-09-05,Port Augusta (C),40,Predicted
@@ -723,55 +835,64 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-03,Port Augusta (C),51.3,Actual
 2021-10-10,Port Augusta (C),54.8,Actual
 2021-10-17,Port Augusta (C),58.7,Actual
-2021-10-22,Port Augusta (C),60,Predicted
+2021-10-23,Port Augusta (C),60,Predicted
 2021-10-24,Port Augusta (C),61.3,Actual
 2021-10-31,Port Augusta (C),64.1,Actual
 2021-11-07,Port Augusta (C),66.8,Actual
 2021-11-14,Port Augusta (C),69.1,Actual
-2021-11-15,Port Augusta (C),70,Predicted
+2021-11-16,Port Augusta (C),70,Predicted
 2021-11-21,Port Augusta (C),72,Actual
-2021-12-08,Port Augusta (C),80,Predicted
-2021-12-31,Port Augusta (C),90,Predicted
+2021-11-28,Port Augusta (C),74.9,Actual
+2021-12-05,Port Augusta (C),77.6,Actual
+2021-12-10,Port Augusta (C),80,Predicted
+2021-12-12,Port Augusta (C),80.1,Actual
+2022-01-03,Port Augusta (C),90,Predicted
 2021-08-23,Port Pirie City and Dists (M),30,Predicted
 2021-08-27,Port Pirie City and Dists (M),31.5,Actual
 2021-09-05,Port Pirie City and Dists (M),36.4,Actual
 2021-09-12,Port Pirie City and Dists (M),39.9,Actual
-2021-09-13,Port Pirie City and Dists (M),40,Predicted
+2021-09-12,Port Pirie City and Dists (M),40,Predicted
 2021-09-19,Port Pirie City and Dists (M),43.6,Actual
 2021-09-26,Port Pirie City and Dists (M),47,Actual
 2021-10-03,Port Pirie City and Dists (M),50.4,Actual
 2021-10-03,Port Pirie City and Dists (M),50,Predicted
 2021-10-10,Port Pirie City and Dists (M),52.8,Actual
 2021-10-17,Port Pirie City and Dists (M),56.3,Actual
-2021-10-23,Port Pirie City and Dists (M),60,Predicted
 2021-10-24,Port Pirie City and Dists (M),60.1,Actual
+2021-10-24,Port Pirie City and Dists (M),60,Predicted
 2021-10-31,Port Pirie City and Dists (M),63.2,Actual
 2021-11-07,Port Pirie City and Dists (M),66.9,Actual
 2021-11-13,Port Pirie City and Dists (M),70,Predicted
 2021-11-14,Port Pirie City and Dists (M),70.9,Actual
 2021-11-21,Port Pirie City and Dists (M),74.5,Actual
-2021-12-03,Port Pirie City and Dists (M),80,Predicted
-2021-12-24,Port Pirie City and Dists (M),90,Predicted
-2021-08-21,Prospect (C),30,Predicted
+2021-11-28,Port Pirie City and Dists (M),77.8,Actual
+2021-12-04,Port Pirie City and Dists (M),80,Predicted
+2021-12-05,Port Pirie City and Dists (M),80.2,Actual
+2021-12-12,Port Pirie City and Dists (M),82.3,Actual
+2021-12-25,Port Pirie City and Dists (M),90,Predicted
+2021-08-19,Prospect (C),30,Predicted
 2021-08-27,Prospect (C),34.5,Actual
 2021-09-05,Prospect (C),38.7,Actual
-2021-09-07,Prospect (C),40,Predicted
+2021-09-06,Prospect (C),40,Predicted
 2021-09-12,Prospect (C),42.1,Actual
 2021-09-19,Prospect (C),46.2,Actual
 2021-09-24,Prospect (C),50,Predicted
 2021-09-26,Prospect (C),50.6,Actual
 2021-10-03,Prospect (C),55.6,Actual
 2021-10-10,Prospect (C),59.5,Actual
-2021-10-11,Prospect (C),60,Predicted
+2021-10-12,Prospect (C),60,Predicted
 2021-10-17,Prospect (C),63.6,Actual
 2021-10-24,Prospect (C),67.7,Actual
-2021-10-28,Prospect (C),70,Predicted
+2021-10-30,Prospect (C),70,Predicted
 2021-10-31,Prospect (C),72,Actual
 2021-11-07,Prospect (C),76.4,Actual
 2021-11-14,Prospect (C),80,Actual
-2021-11-14,Prospect (C),80,Predicted
+2021-11-17,Prospect (C),80,Predicted
 2021-11-21,Prospect (C),82.9,Actual
-2021-12-01,Prospect (C),90,Predicted
+2021-11-28,Prospect (C),85.6,Actual
+2021-12-05,Prospect (C),87.9,Actual
+2021-12-05,Prospect (C),90,Predicted
+2021-12-12,Prospect (C),89.5,Actual
 2021-08-27,Renmark Paringa (DC),24.9,Actual
 2021-09-05,Renmark Paringa (DC),28.2,Actual
 2021-09-12,Renmark Paringa (DC),31.5,Actual
@@ -781,37 +902,43 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-09-30,Renmark Paringa (DC),40,Predicted
 2021-10-03,Renmark Paringa (DC),38.1,Actual
 2021-10-10,Renmark Paringa (DC),41.6,Actual
-2021-10-16,Renmark Paringa (DC),50,Predicted
+2021-10-15,Renmark Paringa (DC),50,Predicted
 2021-10-17,Renmark Paringa (DC),46.8,Actual
 2021-10-24,Renmark Paringa (DC),51.7,Actual
 2021-10-31,Renmark Paringa (DC),56.8,Actual
-2021-11-01,Renmark Paringa (DC),60,Predicted
+2021-10-31,Renmark Paringa (DC),60,Predicted
 2021-11-07,Renmark Paringa (DC),63.6,Actual
 2021-11-14,Renmark Paringa (DC),69.8,Actual
-2021-11-18,Renmark Paringa (DC),70,Predicted
+2021-11-16,Renmark Paringa (DC),70,Predicted
 2021-11-21,Renmark Paringa (DC),77.1,Actual
-2021-12-04,Renmark Paringa (DC),80,Predicted
-2021-12-20,Renmark Paringa (DC),90,Predicted
-2021-08-03,Robe (DC),30,Predicted
-2021-08-24,Robe (DC),40,Predicted
+2021-11-28,Renmark Paringa (DC),81.1,Actual
+2021-12-01,Renmark Paringa (DC),80,Predicted
+2021-12-05,Renmark Paringa (DC),83.8,Actual
+2021-12-12,Renmark Paringa (DC),86.7,Actual
+2021-12-17,Renmark Paringa (DC),90,Predicted
+2021-08-04,Robe (DC),30,Predicted
+2021-08-25,Robe (DC),40,Predicted
 2021-08-27,Robe (DC),40.8,Actual
 2021-09-05,Robe (DC),46.4,Actual
 2021-09-12,Robe (DC),49.6,Actual
-2021-09-14,Robe (DC),50,Predicted
+2021-09-15,Robe (DC),50,Predicted
 2021-09-19,Robe (DC),53,Actual
 2021-09-26,Robe (DC),55.7,Actual
 2021-10-03,Robe (DC),59.1,Actual
-2021-10-06,Robe (DC),60,Predicted
+2021-10-05,Robe (DC),60,Predicted
 2021-10-10,Robe (DC),61.4,Actual
 2021-10-17,Robe (DC),63.9,Actual
 2021-10-24,Robe (DC),66.9,Actual
-2021-10-27,Robe (DC),70,Predicted
+2021-10-26,Robe (DC),70,Predicted
 2021-10-31,Robe (DC),71.6,Actual
 2021-11-07,Robe (DC),75.5,Actual
 2021-11-14,Robe (DC),78.9,Actual
-2021-11-17,Robe (DC),80,Predicted
+2021-11-16,Robe (DC),80,Predicted
 2021-11-21,Robe (DC),83.1,Actual
-2021-12-08,Robe (DC),90,Predicted
+2021-11-28,Robe (DC),87.3,Actual
+2021-12-05,Robe (DC),89.2,Actual
+2021-12-07,Robe (DC),90,Predicted
+2021-12-12,Robe (DC),91.5,Actual
 2021-08-27,Salisbury (C),26.1,Actual
 2021-09-05,Salisbury (C),30.2,Actual
 2021-09-07,Salisbury (C),30,Predicted
@@ -825,18 +952,21 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-17,Salisbury (C),50.1,Actual
 2021-10-24,Salisbury (C),54.3,Actual
 2021-10-31,Salisbury (C),58.9,Actual
-2021-11-02,Salisbury (C),60,Predicted
+2021-11-01,Salisbury (C),60,Predicted
 2021-11-07,Salisbury (C),63.6,Actual
 2021-11-14,Salisbury (C),67.9,Actual
 2021-11-20,Salisbury (C),70,Predicted
 2021-11-21,Salisbury (C),72,Actual
-2021-12-09,Salisbury (C),80,Predicted
+2021-11-28,Salisbury (C),75.7,Actual
+2021-12-05,Salisbury (C),78.5,Actual
+2021-12-08,Salisbury (C),80,Predicted
+2021-12-12,Salisbury (C),81.2,Actual
 2021-12-27,Salisbury (C),90,Predicted
 2021-08-27,Tatiara (DC),30.5,Actual
 2021-08-28,Tatiara (DC),30,Predicted
 2021-09-05,Tatiara (DC),35,Actual
 2021-09-12,Tatiara (DC),38.3,Actual
-2021-09-16,Tatiara (DC),40,Predicted
+2021-09-15,Tatiara (DC),40,Predicted
 2021-09-19,Tatiara (DC),41.3,Actual
 2021-09-26,Tatiara (DC),45.3,Actual
 2021-10-03,Tatiara (DC),49,Actual
@@ -847,15 +977,18 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-24,Tatiara (DC),60.2,Actual
 2021-10-31,Tatiara (DC),65.4,Actual
 2021-11-07,Tatiara (DC),69,Actual
-2021-11-10,Tatiara (DC),70,Predicted
+2021-11-11,Tatiara (DC),70,Predicted
 2021-11-14,Tatiara (DC),72.1,Actual
 2021-11-21,Tatiara (DC),76.4,Actual
-2021-11-29,Tatiara (DC),80,Predicted
-2021-12-17,Tatiara (DC),90,Predicted
-2021-08-24,Tea Tree Gully (C),30,Predicted
+2021-11-28,Tatiara (DC),80.3,Actual
+2021-11-30,Tatiara (DC),80,Predicted
+2021-12-05,Tatiara (DC),82.5,Actual
+2021-12-12,Tatiara (DC),84.8,Actual
+2021-12-18,Tatiara (DC),90,Predicted
+2021-08-22,Tea Tree Gully (C),30,Predicted
 2021-08-27,Tea Tree Gully (C),32.9,Actual
 2021-09-05,Tea Tree Gully (C),37.8,Actual
-2021-09-11,Tea Tree Gully (C),40,Predicted
+2021-09-10,Tea Tree Gully (C),40,Predicted
 2021-09-12,Tea Tree Gully (C),41.3,Actual
 2021-09-19,Tea Tree Gully (C),44.4,Actual
 2021-09-26,Tea Tree Gully (C),48,Actual
@@ -866,13 +999,16 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-17,Tea Tree Gully (C),60,Predicted
 2021-10-24,Tea Tree Gully (C),63.4,Actual
 2021-10-31,Tea Tree Gully (C),68.3,Actual
-2021-11-04,Tea Tree Gully (C),70,Predicted
+2021-11-05,Tea Tree Gully (C),70,Predicted
 2021-11-07,Tea Tree Gully (C),72.5,Actual
 2021-11-14,Tea Tree Gully (C),76.3,Actual
 2021-11-21,Tea Tree Gully (C),79.9,Actual
-2021-11-22,Tea Tree Gully (C),80,Predicted
-2021-12-10,Tea Tree Gully (C),90,Predicted
-2021-08-20,The Coorong (DC),30,Predicted
+2021-11-24,Tea Tree Gully (C),80,Predicted
+2021-11-28,Tea Tree Gully (C),83.1,Actual
+2021-12-05,Tea Tree Gully (C),85.3,Actual
+2021-12-12,Tea Tree Gully (C),87.4,Actual
+2021-12-12,Tea Tree Gully (C),90,Predicted
+2021-08-19,The Coorong (DC),30,Predicted
 2021-08-27,The Coorong (DC),33.1,Actual
 2021-09-05,The Coorong (DC),36.9,Actual
 2021-09-11,The Coorong (DC),40,Predicted
@@ -888,15 +1024,18 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-31,The Coorong (DC),62.2,Actual
 2021-11-07,The Coorong (DC),66.1,Actual
 2021-11-14,The Coorong (DC),69.2,Actual
-2021-11-16,The Coorong (DC),70,Predicted
+2021-11-17,The Coorong (DC),70,Predicted
 2021-11-21,The Coorong (DC),72.5,Actual
-2021-12-08,The Coorong (DC),80,Predicted
-2021-12-30,The Coorong (DC),90,Predicted
-2021-08-01,Unley (C),30,Predicted
-2021-08-21,Unley (C),40,Predicted
+2021-11-28,The Coorong (DC),75.6,Actual
+2021-12-05,The Coorong (DC),77.8,Actual
+2021-12-09,The Coorong (DC),80,Predicted
+2021-12-12,The Coorong (DC),80.6,Actual
+2021-12-31,The Coorong (DC),90,Predicted
+2021-07-27,Unley (C),30,Predicted
+2021-08-17,Unley (C),40,Predicted
 2021-08-27,Unley (C),43,Actual
 2021-09-05,Unley (C),47.2,Actual
-2021-09-09,Unley (C),50,Predicted
+2021-09-08,Unley (C),50,Predicted
 2021-09-12,Unley (C),50.5,Actual
 2021-09-19,Unley (C),54.5,Actual
 2021-09-26,Unley (C),59.1,Actual
@@ -904,36 +1043,42 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-03,Unley (C),63.7,Actual
 2021-10-10,Unley (C),67.2,Actual
 2021-10-17,Unley (C),70.7,Actual
-2021-10-18,Unley (C),70,Predicted
+2021-10-20,Unley (C),70,Predicted
 2021-10-24,Unley (C),73.6,Actual
 2021-10-31,Unley (C),77.3,Actual
-2021-11-06,Unley (C),80,Predicted
 2021-11-07,Unley (C),80.5,Actual
+2021-11-11,Unley (C),80,Predicted
 2021-11-14,Unley (C),83,Actual
 2021-11-21,Unley (C),85.3,Actual
-2021-11-26,Unley (C),90,Predicted
-2021-07-26,Victor Harbor (C),30,Predicted
-2021-08-16,Victor Harbor (C),40,Predicted
+2021-11-28,Unley (C),87.1,Actual
+2021-12-02,Unley (C),90,Predicted
+2021-12-05,Unley (C),88.4,Actual
+2021-12-12,Unley (C),89.5,Actual
+2021-07-23,Victor Harbor (C),30,Predicted
+2021-08-14,Victor Harbor (C),40,Predicted
 2021-08-27,Victor Harbor (C),44.7,Actual
+2021-09-04,Victor Harbor (C),50,Predicted
 2021-09-05,Victor Harbor (C),50.1,Actual
-2021-09-05,Victor Harbor (C),50,Predicted
 2021-09-12,Victor Harbor (C),53.5,Actual
 2021-09-19,Victor Harbor (C),57.1,Actual
 2021-09-25,Victor Harbor (C),60,Predicted
 2021-09-26,Victor Harbor (C),60.6,Actual
 2021-10-03,Victor Harbor (C),63.9,Actual
 2021-10-10,Victor Harbor (C),67.2,Actual
-2021-10-16,Victor Harbor (C),70,Predicted
 2021-10-17,Victor Harbor (C),71.1,Actual
+2021-10-17,Victor Harbor (C),70,Predicted
 2021-10-24,Victor Harbor (C),74.4,Actual
 2021-10-31,Victor Harbor (C),77.6,Actual
-2021-11-05,Victor Harbor (C),80,Predicted
 2021-11-07,Victor Harbor (C),81.4,Actual
+2021-11-07,Victor Harbor (C),80,Predicted
 2021-11-14,Victor Harbor (C),84.2,Actual
 2021-11-21,Victor Harbor (C),86.9,Actual
-2021-11-25,Victor Harbor (C),90,Predicted
+2021-11-28,Victor Harbor (C),89.7,Actual
+2021-11-28,Victor Harbor (C),90,Predicted
+2021-12-05,Victor Harbor (C),92.3,Actual
+2021-12-12,Victor Harbor (C),93.7,Actual
 2021-08-27,Wakefield (DC),27.5,Actual
-2021-08-29,Wakefield (DC),30,Predicted
+2021-08-28,Wakefield (DC),30,Predicted
 2021-09-05,Wakefield (DC),31.7,Actual
 2021-09-12,Wakefield (DC),37.2,Actual
 2021-09-17,Wakefield (DC),40,Predicted
@@ -944,34 +1089,40 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-10,Wakefield (DC),52.7,Actual
 2021-10-17,Wakefield (DC),56.6,Actual
 2021-10-24,Wakefield (DC),60.6,Actual
-2021-10-24,Wakefield (DC),60,Predicted
+2021-10-26,Wakefield (DC),60,Predicted
 2021-10-31,Wakefield (DC),63,Actual
 2021-11-07,Wakefield (DC),67.4,Actual
-2021-11-12,Wakefield (DC),70,Predicted
 2021-11-14,Wakefield (DC),70.4,Actual
+2021-11-15,Wakefield (DC),70,Predicted
 2021-11-21,Wakefield (DC),72.8,Actual
-2021-12-01,Wakefield (DC),80,Predicted
-2021-12-19,Wakefield (DC),90,Predicted
-2021-07-30,Walkerville (M),30,Predicted
-2021-08-18,Walkerville (M),40,Predicted
+2021-11-28,Wakefield (DC),75.1,Actual
+2021-12-05,Wakefield (DC),78.5,Actual
+2021-12-05,Wakefield (DC),80,Predicted
+2021-12-12,Wakefield (DC),80,Actual
+2021-12-25,Wakefield (DC),90,Predicted
+2021-07-24,Walkerville (M),30,Predicted
+2021-08-15,Walkerville (M),40,Predicted
 2021-08-27,Walkerville (M),44.1,Actual
 2021-09-05,Walkerville (M),48.6,Actual
-2021-09-07,Walkerville (M),50,Predicted
+2021-09-05,Walkerville (M),50,Predicted
 2021-09-12,Walkerville (M),51.8,Actual
 2021-09-19,Walkerville (M),55.8,Actual
 2021-09-26,Walkerville (M),60.7,Actual
 2021-09-26,Walkerville (M),60,Predicted
 2021-10-03,Walkerville (M),64.5,Actual
 2021-10-10,Walkerville (M),68,Actual
-2021-10-16,Walkerville (M),70,Predicted
 2021-10-17,Walkerville (M),71.7,Actual
+2021-10-18,Walkerville (M),70,Predicted
 2021-10-24,Walkerville (M),74.8,Actual
 2021-10-31,Walkerville (M),78.4,Actual
-2021-11-04,Walkerville (M),80,Predicted
 2021-11-07,Walkerville (M),81.6,Actual
+2021-11-08,Walkerville (M),80,Predicted
 2021-11-14,Walkerville (M),84.3,Actual
 2021-11-21,Walkerville (M),86.6,Actual
-2021-11-24,Walkerville (M),90,Predicted
+2021-11-28,Walkerville (M),88.4,Actual
+2021-11-29,Walkerville (M),90,Predicted
+2021-12-05,Walkerville (M),90,Actual
+2021-12-12,Walkerville (M),91.2,Actual
 2021-08-27,Wattle Range (DC),30.8,Actual
 2021-08-30,Wattle Range (DC),30,Predicted
 2021-09-05,Wattle Range (DC),33.6,Actual
@@ -980,19 +1131,22 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-09-19,Wattle Range (DC),41.9,Actual
 2021-09-26,Wattle Range (DC),45.3,Actual
 2021-10-03,Wattle Range (DC),48.4,Actual
-2021-10-05,Wattle Range (DC),50,Predicted
+2021-10-04,Wattle Range (DC),50,Predicted
 2021-10-10,Wattle Range (DC),50.7,Actual
 2021-10-17,Wattle Range (DC),54.7,Actual
 2021-10-22,Wattle Range (DC),60,Predicted
 2021-10-24,Wattle Range (DC),58.8,Actual
 2021-10-31,Wattle Range (DC),63.6,Actual
 2021-11-07,Wattle Range (DC),68.6,Actual
-2021-11-09,Wattle Range (DC),70,Predicted
+2021-11-08,Wattle Range (DC),70,Predicted
 2021-11-14,Wattle Range (DC),74.1,Actual
 2021-11-21,Wattle Range (DC),79.5,Actual
-2021-11-27,Wattle Range (DC),80,Predicted
-2021-12-15,Wattle Range (DC),90,Predicted
-2021-08-26,West Torrens (C),30,Predicted
+2021-11-26,Wattle Range (DC),80,Predicted
+2021-11-28,Wattle Range (DC),83.6,Actual
+2021-12-05,Wattle Range (DC),85.5,Actual
+2021-12-12,Wattle Range (DC),88.2,Actual
+2021-12-13,Wattle Range (DC),90,Predicted
+2021-08-25,West Torrens (C),30,Predicted
 2021-08-27,West Torrens (C),31.8,Actual
 2021-09-05,West Torrens (C),35.6,Actual
 2021-09-12,West Torrens (C),38.6,Actual
@@ -1003,16 +1157,19 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-03,West Torrens (C),50.7,Actual
 2021-10-10,West Torrens (C),54.2,Actual
 2021-10-17,West Torrens (C),57.9,Actual
-2021-10-20,West Torrens (C),60,Predicted
+2021-10-21,West Torrens (C),60,Predicted
 2021-10-24,West Torrens (C),61.7,Actual
 2021-10-31,West Torrens (C),66.2,Actual
 2021-11-07,West Torrens (C),70.5,Actual
-2021-11-07,West Torrens (C),70,Predicted
+2021-11-09,West Torrens (C),70,Predicted
 2021-11-14,West Torrens (C),74.3,Actual
 2021-11-21,West Torrens (C),77.7,Actual
-2021-11-25,West Torrens (C),80,Predicted
-2021-12-14,West Torrens (C),90,Predicted
-2021-08-16,Whyalla (C),30,Predicted
+2021-11-28,West Torrens (C),80.4,Actual
+2021-11-28,West Torrens (C),80,Predicted
+2021-12-05,West Torrens (C),82.5,Actual
+2021-12-12,West Torrens (C),84.4,Actual
+2021-12-17,West Torrens (C),90,Predicted
+2021-08-14,Whyalla (C),30,Predicted
 2021-08-27,Whyalla (C),33.4,Actual
 2021-09-05,Whyalla (C),38,Actual
 2021-09-08,Whyalla (C),40,Predicted
@@ -1024,38 +1181,44 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-10,Whyalla (C),53.6,Actual
 2021-10-17,Whyalla (C),57.1,Actual
 2021-10-24,Whyalla (C),60.3,Actual
-2021-10-25,Whyalla (C),60,Predicted
+2021-10-26,Whyalla (C),60,Predicted
 2021-10-31,Whyalla (C),62.6,Actual
 2021-11-07,Whyalla (C),65.4,Actual
 2021-11-14,Whyalla (C),67.8,Actual
-2021-11-17,Whyalla (C),70,Predicted
+2021-11-19,Whyalla (C),70,Predicted
 2021-11-21,Whyalla (C),70.8,Actual
-2021-12-11,Whyalla (C),80,Predicted
-2022-01-03,Whyalla (C),90,Predicted
-2021-08-19,Yankalilla (DC),30,Predicted
+2021-11-28,Whyalla (C),73.7,Actual
+2021-12-05,Whyalla (C),75.7,Actual
+2021-12-12,Whyalla (C),77.7,Actual
+2021-12-13,Whyalla (C),80,Predicted
+2022-01-07,Whyalla (C),90,Predicted
+2021-08-18,Yankalilla (DC),30,Predicted
 2021-08-27,Yankalilla (DC),32.6,Actual
 2021-09-05,Yankalilla (DC),38.4,Actual
-2021-09-08,Yankalilla (DC),40,Predicted
+2021-09-07,Yankalilla (DC),40,Predicted
 2021-09-12,Yankalilla (DC),42.3,Actual
 2021-09-19,Yankalilla (DC),47.5,Actual
 2021-09-26,Yankalilla (DC),51,Actual
 2021-09-27,Yankalilla (DC),50,Predicted
 2021-10-03,Yankalilla (DC),53.9,Actual
 2021-10-10,Yankalilla (DC),56.6,Actual
-2021-10-16,Yankalilla (DC),60,Predicted
 2021-10-17,Yankalilla (DC),59.9,Actual
+2021-10-17,Yankalilla (DC),60,Predicted
 2021-10-24,Yankalilla (DC),63.3,Actual
 2021-10-31,Yankalilla (DC),67.3,Actual
-2021-11-04,Yankalilla (DC),70,Predicted
+2021-11-06,Yankalilla (DC),70,Predicted
 2021-11-07,Yankalilla (DC),71.7,Actual
 2021-11-14,Yankalilla (DC),75.5,Actual
 2021-11-21,Yankalilla (DC),78.5,Actual
-2021-11-23,Yankalilla (DC),80,Predicted
-2021-12-12,Yankalilla (DC),90,Predicted
-2021-08-19,Yorke Peninsula (DC),30,Predicted
+2021-11-25,Yankalilla (DC),80,Predicted
+2021-11-28,Yankalilla (DC),81.8,Actual
+2021-12-05,Yankalilla (DC),83.7,Actual
+2021-12-12,Yankalilla (DC),85.9,Actual
+2021-12-15,Yankalilla (DC),90,Predicted
+2021-08-18,Yorke Peninsula (DC),30,Predicted
 2021-08-27,Yorke Peninsula (DC),33,Actual
 2021-09-05,Yorke Peninsula (DC),38.7,Actual
-2021-09-08,Yorke Peninsula (DC),40,Predicted
+2021-09-07,Yorke Peninsula (DC),40,Predicted
 2021-09-12,Yorke Peninsula (DC),42.1,Actual
 2021-09-19,Yorke Peninsula (DC),47,Actual
 2021-09-26,Yorke Peninsula (DC),50.6,Actual
@@ -1066,9 +1229,12 @@ date_as_at,abs_name,air_second_dose_pct,type
 2021-10-17,Yorke Peninsula (DC),60,Predicted
 2021-10-24,Yorke Peninsula (DC),63.5,Actual
 2021-10-31,Yorke Peninsula (DC),67.3,Actual
-2021-11-05,Yorke Peninsula (DC),70,Predicted
+2021-11-06,Yorke Peninsula (DC),70,Predicted
 2021-11-07,Yorke Peninsula (DC),71.1,Actual
 2021-11-14,Yorke Peninsula (DC),74.8,Actual
 2021-11-21,Yorke Peninsula (DC),77.8,Actual
-2021-11-25,Yorke Peninsula (DC),80,Predicted
-2021-12-14,Yorke Peninsula (DC),90,Predicted
+2021-11-27,Yorke Peninsula (DC),80,Predicted
+2021-11-28,Yorke Peninsula (DC),81,Actual
+2021-12-05,Yorke Peninsula (DC),83.4,Actual
+2021-12-12,Yorke Peninsula (DC),85.5,Actual
+2021-12-17,Yorke Peninsula (DC),90,Predicted

@@ -1,55 +1,56 @@
 abs_name,air_second_dose_pct,date_as_at,type
-Adelaide (C),82.91400646124748,2021-11-23,Predicted
-Adelaide Hills (DC),90.0031029441634,2021-11-23,Predicted
-Adelaide Plains (DC),63.19519103422135,2021-11-23,Predicted
-Alexandrina (DC),78.72909915923265,2021-11-23,Predicted
-Barossa (DC),83.02330096008882,2021-11-23,Predicted
-Barunga West (DC),79.1006142312508,2021-11-23,Predicted
-Berri and Barmera (DC),76.26366076112936,2021-11-23,Predicted
-Burnside (C),93.99396024448652,2021-11-23,Predicted
-Campbelltown (C) (SA),82.1737416536871,2021-11-23,Predicted
-Charles Sturt (C),75.98381773310211,2021-11-23,Predicted
-Clare and Gilbert Valleys (DC),82.41218074573044,2021-11-23,Predicted
-Copper Coast (DC),77.77025471582238,2021-11-23,Predicted
-Flinders Ranges (DC),77.92627516586799,2021-11-23,Predicted
-Gawler (T),81.97745311680046,2021-11-23,Predicted
-Goyder (DC),67.54048679399966,2021-11-23,Predicted
+Adelaide (C),80.69259412734209,2021-11-23,Predicted
+Adelaide Hills (DC),87.84469210682255,2021-11-23,Predicted
+Adelaide Plains (DC),64.3711740221479,2021-11-23,Predicted
+Alexandrina (DC),78.14187574079733,2021-11-23,Predicted
+Barossa (DC),81.89108887695329,2021-11-23,Predicted
+Barunga West (DC),77.65854229942943,2021-11-23,Predicted
+Berri and Barmera (DC),77.09082371842305,2021-11-23,Predicted
+Burnside (C),90.88815893769788,2021-11-23,Predicted
+Campbelltown (C) (SA),80.85527177939184,2021-11-23,Predicted
+Charles Sturt (C),74.9796513167621,2021-11-23,Predicted
+Clare and Gilbert Valleys (DC),80.37034446996222,2021-11-23,Predicted
+Copper Coast (DC),77.6554057707981,2021-11-23,Predicted
+Flinders Ranges (DC),76.58894848692489,2021-11-23,Predicted
+Gawler (T),82.47219090303042,2021-11-23,Predicted
+Goyder (DC),67.08179962404574,2021-11-23,Predicted
 Grant (DC),19.757586168311718,2021-11-23,Predicted
-Holdfast Bay (C),89.5894687875516,2021-11-23,Predicted
-Karoonda East Murray (DC),63.95172088417985,2021-11-23,Predicted
-Kingston (DC) (SA),83.1703322021549,2021-11-23,Predicted
-Light (RegC),65.24314301490995,2021-11-23,Predicted
-Loxton Waikerie (DC),74.05961861914511,2021-11-23,Predicted
-Marion (C),83.12325039562893,2021-11-23,Predicted
-Mid Murray (DC),63.80545852867908,2021-11-23,Predicted
-Mitcham (C),90.64011507116993,2021-11-23,Predicted
-Mount Barker (DC),83.12742228094248,2021-11-23,Predicted
-Mount Gambier (C),89.68451558612469,2021-11-23,Predicted
-Mount Remarkable (DC),73.54642584372596,2021-11-23,Predicted
-Murray Bridge (RC),66.74612838083522,2021-11-23,Predicted
-Naracoorte and Lucindale (DC),85.58897208164672,2021-11-23,Predicted
-Northern Areas (DC),86.00225345065337,2021-11-23,Predicted
-Norwood Payneham St Peters (C),85.0165693812105,2021-11-23,Predicted
-Onkaparinga (C),79.24658721628839,2021-11-23,Predicted
-Orroroo/Carrieton (DC),88.11894247287637,2021-11-23,Predicted
-Peterborough (DC),65.6879215996978,2021-11-23,Predicted
-Playford (C),63.32686691814706,2021-11-23,Predicted
-Port Adelaide Enfield (C),77.10192435852878,2021-11-23,Predicted
-Port Augusta (C),73.33211610150101,2021-11-23,Predicted
-Port Pirie City and Dists (M),74.74572814938074,2021-11-23,Predicted
-Prospect (C),84.82725302751896,2021-11-23,Predicted
-Renmark Paringa (DC),71.8914511682724,2021-11-23,Predicted
-Robe (DC),82.49344127117547,2021-11-23,Predicted
-Salisbury (C),71.18190342399612,2021-11-23,Predicted
-Tatiara (DC),76.64565542330274,2021-11-23,Predicted
-Tea Tree Gully (C),80.27914750224227,2021-11-23,Predicted
-The Coorong (DC),72.87827727518743,2021-11-23,Predicted
-Unley (C),88.16019921127918,2021-11-23,Predicted
-Victor Harbor (C),88.61003228509071,2021-11-23,Predicted
-Wakefield (DC),75.4320624164302,2021-11-23,Predicted
-Walkerville (M),89.2940962819248,2021-11-23,Predicted
-Wattle Range (DC),77.20116493957721,2021-11-23,Predicted
-West Torrens (C),78.43871180161841,2021-11-23,Predicted
-Whyalla (C),72.1578909119371,2021-11-23,Predicted
-Yankalilla (DC),79.54632619577387,2021-11-23,Predicted
-Yorke Peninsula (DC),78.95186337440282,2021-11-23,Predicted
+Holdfast Bay (C),86.90507579265068,2021-11-23,Predicted
+Karoonda East Murray (DC),65.37877963182382,2021-11-23,Predicted
+Kingston (DC) (SA),82.66262681494845,2021-11-23,Predicted
+Light (RegC),64.88446537706477,2021-11-23,Predicted
+Loxton Waikerie (DC),74.83908521001467,2021-11-23,Predicted
+Marion (C),81.31181911623025,2021-11-23,Predicted
+Mid Murray (DC),63.771301068598405,2021-11-23,Predicted
+Mitcham (C),87.73345206126578,2021-11-23,Predicted
+Mount Barker (DC),82.27382773724094,2021-11-23,Predicted
+Mount Gambier (C),89.99744528566407,2021-11-23,Predicted
+Mount Remarkable (DC),70.53921267316218,2021-11-23,Predicted
+Murray Bridge (RC),66.69267593895893,2021-11-23,Predicted
+Naracoorte and Lucindale (DC),83.9574443477286,2021-11-23,Predicted
+Northern Areas (DC),82.98012366656985,2021-11-23,Predicted
+Norwood Payneham St Peters (C),82.61771515482542,2021-11-23,Predicted
+Onkaparinga (C),78.23424105489357,2021-11-23,Predicted
+Orroroo/Carrieton (DC),86.33477197385037,2021-11-23,Predicted
+Peterborough (DC),65.35490536335965,2021-11-23,Predicted
+Playford (C),65.22834473849798,2021-11-23,Predicted
+Port Adelaide Enfield (C),76.14827024223996,2021-11-23,Predicted
+Port Augusta (C),72.81724789799227,2021-11-23,Predicted
+Port Pirie City and Dists (M),74.37810550781433,2021-11-23,Predicted
+Prospect (C),82.73691717905058,2021-11-23,Predicted
+Renmark Paringa (DC),73.97071630306164,2021-11-23,Predicted
+Robe (DC),82.92088261167373,2021-11-23,Predicted
+Salisbury (C),71.43410266501269,2021-11-23,Predicted
+Tatiara (DC),76.23436273057268,2021-11-23,Predicted
+Tea Tree Gully (C),79.3771533076524,2021-11-23,Predicted
+The Coorong (DC),72.6281103229885,2021-11-23,Predicted
+Unley (C),85.27041253055722,2021-11-23,Predicted
+Victor Harbor (C),87.28203700274025,2021-11-23,Predicted
+Wakefield (DC),73.48412789836402,2021-11-23,Predicted
+Walkerville (M),86.59802249240784,2021-11-23,Predicted
+Wattle Range (DC),77.91893311541571,2021-11-23,Predicted
+West Torrens (C),77.09799031409784,2021-11-23,Predicted
+Whyalla (C),71.3261528631756,2021-11-23,Predicted
+Yankalilla (DC),78.49065000185146,2021-11-23,Predicted
+Yorke Peninsula (DC),77.98956265278866,2021-11-23,Predicted
+Mount Gambier (C) & Grant (DC),78.0026785714308,2021-11-23,Predicted
